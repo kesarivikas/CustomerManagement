@@ -1,0 +1,48 @@
+[
+	{
+		"customerID": "1",
+		"customername": "Ravi",
+		"orders":[
+				{
+					"productID": "111",
+					"productName": "Basket",
+					"date": "09/14/2014",
+					"quantity": "1",
+					"unitePrice": "$29",
+					"total": "$29.00"
+				},
+				{
+					"productID": "112",
+					"productName": "pen",
+					"date": "03/14/2014",
+					"quantity": "1",
+					"unitePrice": "$10",
+					"total": "$20.00"
+				}
+		],
+		"orderTotal": "$47.00"
+	},
+	{
+		"customerID": "2",
+		"customername": "Suman",
+		"orders":[
+				{
+					"productID": "221",
+					"productName": "Basket",
+					"date": "09/14/2014",
+					"quantity": "1",
+					"unitePrice": "$29",
+					"total": "$29.00"
+				},
+				{
+					"productID": "222",
+					"productName": "pen",
+					"date": "03/14/2014",
+					"quantity": "1",
+					"unitePrice": "$10",
+					"total": "$20.00"
+				}
+		],
+		"orderTotal": "$47.00"
+	}
+]
