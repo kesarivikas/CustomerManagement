@@ -12,14 +12,16 @@ import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { LoginService } from './login/login.service';
 import { LogoutComponent } from './logout/logout.component';
-import { CardViewComponent } from './Customers/card-view/card-view.component';
+import { CardViewComponent } from './customers/card-view/card-view.component';
 import { ListViewComponent } from './customers/list-view/list-view.component';
-import { CustomerDetailsComponent } from './customers/map-view/customer-details/customer-details.component';
 import { CustomerOrdersComponent } from './customers/map-view/customer-orders/customer-orders.component';
 import { EditCustomerComponent } from './customers/map-view/edit-customer/edit-customer.component';
 
 import { CustomersService } from './customers/customers.service';
-
+import { CustomerNavComponent } from './customers/customer-nav/customer-nav.component';
+import { SearchViewComponent } from './customers/search-view/search-view.component';
+import { FilterPipeModule } from 'ngx-filter-pipe';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,16 +33,19 @@ import { CustomersService } from './customers/customers.service';
 		LogoutComponent,
 		CardViewComponent,
 		ListViewComponent,
-		CustomerDetailsComponent,
 		CustomerOrdersComponent,
-		EditCustomerComponent
+		EditCustomerComponent,
+		CustomerNavComponent,
+		SearchViewComponent
   ],
   imports: [
 		BrowserModule,
 		AppRoutingModule,
 		HttpClientModule,
 		ReactiveFormsModule,
-		TableModule
+		TableModule,
+		FilterPipeModule,
+		FormsModule
   ],
   providers: [LoginService, CustomersService],
   bootstrap: [AppComponent]

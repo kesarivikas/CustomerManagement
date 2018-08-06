@@ -1,4 +1,4 @@
-<p-table [value]="customerList">
+<p-table [value]="customers" *ngIf="customerList | async as customers">
 	<ng-template pTemplate="header">
 			<tr>
 					<th>First Name</th>
@@ -20,4 +20,3 @@
 			</tr>
 	</ng-template>
 </p-table>
-customer list loaded

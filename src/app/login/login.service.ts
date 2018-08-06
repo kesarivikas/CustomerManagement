@@ -10,7 +10,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
 	@Output()
-	loginFlag:EventEmitter<boolean> = new EventEmitter();
+	loginFlag: EventEmitter<boolean> = new EventEmitter();
 
 	isLoggedIn(login) {
 		console.log('login service called');

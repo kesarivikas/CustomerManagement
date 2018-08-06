@@ -8,5 +8,6 @@ export class Customers {
 	gender: string;
 	email: string;
 	zip: string ;
+	orders: string;
 	orderTotal: string;
 }

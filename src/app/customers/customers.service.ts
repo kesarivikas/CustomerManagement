@@ -4,10 +4,10 @@ import { Customers } from '../customers/customers';
 
 @Injectable()
 export class CustomersService {
-	public customersUrl: './assert/customers-profile.json';
+	public customersUrl = './assets/customers-profile.json';
   constructor(private httpClient: HttpClient) { }
 
 	getCustomers() {
-		return this.httpClient.get(this.customersUrl);
+		return this.httpClient.get<Customers[]>(this.customersUrl);
 	}
 }

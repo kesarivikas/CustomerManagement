@@ -1,0 +1,29 @@
+<div>
+	<label for="fname" class="col-sm-2 col-form-label">Filter: </label>
+	<input type="text" [(ngModel)]="userFilter.firstName" placeholder="First Name">
+	<!-- <ul>
+		<li *ngFor="let customer of customers | filterBy: userFilter">{{ customer.firstName }}</li>
+	</ul> -->
+		<p-table [value]="customers | filterBy: userFilter" *ngIf="(customers | filterBy: userFilter)?.length else noUserFound" >
+			<ng-template pTemplate="header">
+				<tr>
+					<th>First Name</th>
+					<th>Location</th>
+					<th>Orders</th>
+					<th></th>
+				</tr>
+			</ng-template>
+			<ng-template pTemplate="body" let-list >
+				<tr>
+					<td>{{list.firstName}}</td>
+					<td>{{list.address}},{{list.city}},{{list.state}}</td>
+					<td>{{list.orders}}</td>
+					<td> </td>
+				</tr>
+			</ng-template>
+		</p-table>
+		<ng-template #noUserFound>
+			No data found
+		</ng-template>
+</div>
+
