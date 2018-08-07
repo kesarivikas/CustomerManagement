@@ -13,6 +13,8 @@ export class NavComponent implements OnInit {
   ngOnInit() {
 		console.log('navigation called..');
 		//this.loginService.loginFlag.subscribe((data) => this.isLogin = data);
-		this.loginService.loginFlag.subscribe((data) => this.isLogin = data);
+		//this.loginService.loginFlag.subscribe((data) => this.isLogin = data);
+		this.isLogin = this.loginService.isCustomerLoggedIn;
+		console.log('user is logged in...',this.loginService.isCustomerLoggedIn);
   }
 }

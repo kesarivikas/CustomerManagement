@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -7,6 +7,7 @@ import { ListViewComponent } from './customers/list-view/list-view.component';
 import { CustomerNavComponent } from './customers/customer-nav/customer-nav.component';
 import { CardViewComponent } from './customers/card-view/card-view.component';
 import { SearchViewComponent } from './customers/search-view/search-view.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
 			{ path: 'customer-list-view', component: ListViewComponent },
 			{ path: 'customer-card-view', component: CardViewComponent },
 			{ path: 'search-view', component: SearchViewComponent }
-		]
+		],
+		canActivate: [AuthGuard]
 	}
 ];
  

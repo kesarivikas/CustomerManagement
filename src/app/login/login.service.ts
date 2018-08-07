@@ -9,13 +9,13 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-	@Output()
-	loginFlag: EventEmitter<boolean> = new EventEmitter();
+	// @Output()
+	// loginFlag: EventEmitter<boolean> = new EventEmitter();
 
-	isLoggedIn(login) {
-		console.log('login service called');
-		this.loginFlag.emit(login);
-	}
+	// isLoggedIn(login) {
+	// 	console.log('login service called');
+	// 	this.loginFlag.emit(login);
+	// }
 	getLoginCredential() {
 		return this.http.get(this.loginUrl);
 	}

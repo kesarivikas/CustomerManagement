@@ -1,0 +1,14 @@
+.customer-name{
+	background-color: #007bff
+}
+@media (min-width: 1200px){
+.container {
+    max-width: 1004px;
+	}
+}
+
+[class*="col-"] {
+	margin-bottom: 15px;
+	padding-right: 30px;
+}
+

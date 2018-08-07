@@ -15,6 +15,7 @@ export class CardViewComponent implements OnInit {
 
   ngOnInit() {
 		this.customerCard = this.customersService.getCustomers();
+		console.log('customer card', this.customerCard);
   }
 
 }

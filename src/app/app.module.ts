@@ -22,6 +22,8 @@ import { CustomerNavComponent } from './customers/customer-nav/customer-nav.comp
 import { SearchViewComponent } from './customers/search-view/search-view.component';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { FormsModule } from '@angular/forms';
+import { PaginatorModule } from 'primeng/paginator';
+import { AuthGuard } from './auth.guard';
 
 
 @NgModule({
@@ -45,9 +47,10 @@ import { FormsModule } from '@angular/forms';
 		ReactiveFormsModule,
 		TableModule,
 		FilterPipeModule,
-		FormsModule
+		FormsModule,
+		PaginatorModule
   ],
-  providers: [LoginService, CustomersService],
+  providers: [LoginService, CustomersService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {  }

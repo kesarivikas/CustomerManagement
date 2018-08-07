@@ -4,7 +4,9 @@
 	<!-- <ul>
 		<li *ngFor="let customer of customers | filterBy: userFilter">{{ customer.firstName }}</li>
 	</ul> -->
-		<p-table [value]="customers | filterBy: userFilter" *ngIf="(customers | filterBy: userFilter)?.length else noUserFound" >
+		<p-table [value]="customers | filterBy: userFilter" 
+						*ngIf="(customers | filterBy: userFilter)?.length else noUserFound"
+						[paginator]="true" [rows]="5">
 			<ng-template pTemplate="header">
 				<tr>
 					<th>First Name</th>
@@ -13,12 +15,12 @@
 					<th></th>
 				</tr>
 			</ng-template>
-			<ng-template pTemplate="body" let-list >
+			<ng-template pTemplate="body" let-customer >
 				<tr>
-					<td>{{list.firstName}}</td>
-					<td>{{list.address}},{{list.city}},{{list.state}}</td>
-					<td>{{list.orders}}</td>
-					<td> </td>
+					<td>{{customer.firstName}}</td>
+					<td>{{customer.address}},{{customer.city}},{{customer.state}}</td>
+					<td>{{customer.orders}}</td>
+					<td><button (click)="deleteCustomer(customer.customerID)">Delete</button></td>
 				</tr>
 			</ng-template>
 		</p-table>
@@ -26,4 +28,5 @@
 			No data found
 		</ng-template>
 </div>
+<!-- <p-paginator [rows]="10" [totalRecords]="100"></p-paginator> -->
 

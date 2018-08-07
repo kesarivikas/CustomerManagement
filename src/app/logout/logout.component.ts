@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login/login.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-logout',
@@ -7,17 +9,13 @@ import { LoginService } from '../login/login.service';
   styleUrls: ['./logout.component.css']
 })
 export class LogoutComponent implements OnInit {
-
-  constructor(private loginService: LoginService) { }
+	public isLoggedInUser;
+  constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit() {
-		// tslint:disable-next-line:indent
-			console.log('logout component is called.....');
-			this.loginService.loginFlag.subscribe((data) => {
-				console.log('logout data....', data);
-				if (data) {
-					this.loginService.isLoggedIn(false);
-				}
-		});
+		this.loginService.isCustomerLoggedIn = false;
+		this.isLoggedInUser = this.loginService.isCustomerLoggedIn;
+		console.log('logout component is called.....',this.loginService.isCustomerLoggedIn);
+		this.router.navigate(['login']);
   }
 }
