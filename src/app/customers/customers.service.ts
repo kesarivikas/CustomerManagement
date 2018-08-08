@@ -6,6 +6,7 @@ import { Customers } from '../customers/customers';
 export class CustomersService {
 	public customersUrl = './assets/customers-profile.json';
 	public customerList;
+	public customer;
   constructor(private httpClient: HttpClient) { }
 
 	getCustomers() {
@@ -18,5 +19,13 @@ export class CustomersService {
 
 	getCustomersList() {
 		return this.customerList;
+	}
+
+	setCustomer(customer) {
+		this.customer = customer;
+	}
+
+	getCustomer() {
+		return this.customer;
 	}
 }

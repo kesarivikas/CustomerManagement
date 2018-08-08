@@ -8,6 +8,10 @@ import { CustomerNavComponent } from './customers/customer-nav/customer-nav.comp
 import { CardViewComponent } from './customers/card-view/card-view.component';
 import { SearchViewComponent } from './customers/search-view/search-view.component';
 import { AuthGuard } from './auth.guard';
+import { MapNavComponent } from './customers/map-view/map-nav/map-nav.component';
+import { CustomerDetailsComponent } from './customers/map-view/customer-details/customer-details.component';
+import { CustomerOrdersComponent } from './customers/map-view/customer-orders/customer-orders.component';
+import { EditCustomerComponent } from './customers/map-view/edit-customer/edit-customer.component';
 
 
 const routes: Routes = [
@@ -20,10 +24,18 @@ const routes: Routes = [
 			{ path: '', redirectTo: 'customer-card-view', pathMatch: 'full' },
 			{ path: 'customer-list-view', component: ListViewComponent },
 			{ path: 'customer-card-view', component: CardViewComponent },
-			{ path: 'search-view', component: SearchViewComponent }
+			{ path: 'search-view', component: SearchViewComponent },
 		],
 		canActivate: [AuthGuard]
-	}
+	},
+	{ path: 'map-view', component: MapNavComponent, 
+		children: [
+			{ path: '', redirectTo: 'customer-details', pathMatch: 'full' },
+			{ path: 'customer-details', component: CustomerDetailsComponent },
+			{ path: 'customer-orders', component: CustomerOrdersComponent },
+			{ path: 'edit-customers', component: EditCustomerComponent },
+		],canActivate: [AuthGuard]
+	},
 ];
  
 @NgModule({

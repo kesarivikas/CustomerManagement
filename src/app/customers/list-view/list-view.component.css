@@ -1,3 +1,7 @@
+.ui-table .ui-widget {
+	padding-right:1rem;
+}
+
 .ui-table-wrapper .ui-table table {
 	width: auto;
 }

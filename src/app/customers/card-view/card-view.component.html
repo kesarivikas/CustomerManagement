@@ -1,8 +1,6 @@
-
 <div *ngIf="customerCard | async as customer">
-	<div *ngFor="let customer of customer">
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-md-3" *ngFor="let customer of customer">
 			<div class="customer-name row border">{{customer.firstName}}</div>
 			<div class="row border">
 				<div class="col-md-5">
@@ -15,22 +13,5 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="col-md-3">.col-sm-4</div> -->
-		<!-- <div class="col-md-3">
-				<div class="customer-name row border">customer name</div>
-				<div class="row border">
-					<div class="col-md-5">
-						image url
-					</div>
-						<div class="col-md-7">
-							<div>{{customer.firstname}}</div>
-							<div>lastname</div>
-							<div>order Url</div>
-					</div>
-				</div>
-			</div>
-		<div class="col-md-3">.col-sm-4</div>
-		<div class="col-md-3">.col-sm-4</div> -->
 	</div>
-</div>
 </div>

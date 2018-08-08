@@ -24,7 +24,9 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
 import { FormsModule } from '@angular/forms';
 import { PaginatorModule } from 'primeng/paginator';
 import { AuthGuard } from './auth.guard';
-
+import { MapNavComponent } from './customers/map-view/map-nav/map-nav.component';
+import { CustomerDetailsComponent } from './customers/map-view/customer-details/customer-details.component';
+import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { AuthGuard } from './auth.guard';
 		CustomerOrdersComponent,
 		EditCustomerComponent,
 		CustomerNavComponent,
-		SearchViewComponent
+		SearchViewComponent,
+		MapNavComponent,
+		CustomerDetailsComponent
   ],
   imports: [
 		BrowserModule,
@@ -48,7 +52,8 @@ import { AuthGuard } from './auth.guard';
 		TableModule,
 		FilterPipeModule,
 		FormsModule,
-		PaginatorModule
+		PaginatorModule,
+		InputTextModule
   ],
   providers: [LoginService, CustomersService, AuthGuard],
   bootstrap: [AppComponent]
