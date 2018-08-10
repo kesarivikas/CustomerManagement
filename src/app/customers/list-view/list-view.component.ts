@@ -9,11 +9,15 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./list-view.component.css']
 })
 export class ListViewComponent implements OnInit {
-	public customerList: Observable<Customers[]>;
-	
+	//public customerList: Observable<Customers[]>;
+	public customerList: Customers[];
 	constructor(private customersService: CustomersService) { }
 	ngOnInit() {
-		this.customerList = this.customersService.getCustomers();
+		if(this.customersService.getCustomersList()){
+			this.customerList=this.customersService.getCustomersList();
+		} else {
+			this.customersService.getCustomers().subscribe(data => this.customerList = data);
+		}
 	}
 	
 	paginate(event) {
@@ -21,5 +25,5 @@ export class ListViewComponent implements OnInit {
 		event.rows = 5;//Number of rows to display in new page
 		//event.page = Index of the new page
 		event.pageCount = 5 //Total number of pages
-}
+	}
 }

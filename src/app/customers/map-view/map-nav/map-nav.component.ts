@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-map-nav',
@@ -7,9 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapNavComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private activatedRoutes: ActivatedRoute) { }
   ngOnInit() {
+		
   }
-
 }

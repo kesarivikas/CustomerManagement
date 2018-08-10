@@ -1,4 +1,5 @@
-<p-table [value]="customers" *ngIf="customerList | async as customers">
+<!-- <p-table [value]="customers" *ngIf="customerList | async as customers"> -->
+<p-table [value]="customers" *ngIf="customerList as customers">
 	<ng-template pTemplate="header">
 		<tr>
 			<th>First Name</th>
@@ -11,7 +12,7 @@
 	</ng-template>
 	<ng-template pTemplate="body" let-list>
 		<tr>
-			<td>{{list.firstName}}</td>
+			<td><a routerLink="/map-view/customer-details/{{list.customerID}}">{{list.firstName}}</a></td>
 			<td>{{list.lastName}}</td>
 			<td>{{list.address}}</td>
 			<td>{{list.city}}</td>

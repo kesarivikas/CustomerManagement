@@ -28,10 +28,11 @@ const routes: Routes = [
 		],
 		canActivate: [AuthGuard]
 	},
+	//{ path: 'map-view/customer-details/list.firstName', component: CustomerDetailsComponent }.component,
 	{ path: 'map-view', component: MapNavComponent, 
 		children: [
-			{ path: '', redirectTo: 'customer-details', pathMatch: 'full' },
-			{ path: 'customer-details', component: CustomerDetailsComponent },
+			{ path: '', redirectTo: 'customer-details/:customerID', pathMatch: 'full' },
+			{ path: 'customer-details/:customerID', component: CustomerDetailsComponent },
 			{ path: 'customer-orders', component: CustomerOrdersComponent },
 			{ path: 'edit-customers', component: EditCustomerComponent },
 		],canActivate: [AuthGuard]
