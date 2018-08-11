@@ -18,7 +18,6 @@ import { CustomerOrdersComponent } from './customers/map-view/customer-orders/cu
 import { EditCustomerComponent } from './customers/map-view/edit-customer/edit-customer.component';
 
 import { CustomersService } from './customers/customers.service';
-import { CustomerNavComponent } from './customers/customer-nav/customer-nav.component';
 import { SearchViewComponent } from './customers/search-view/search-view.component';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { FormsModule } from '@angular/forms';
@@ -27,6 +26,13 @@ import { AuthGuard } from './auth.guard';
 import { MapNavComponent } from './customers/map-view/map-nav/map-nav.component';
 import { CustomerDetailsComponent } from './customers/map-view/customer-details/customer-details.component';
 import {InputTextModule} from 'primeng/inputtext';
+import { NewcustomerNavComponent } from './customers/new-customer/newcustomer-nav/newcustomer-nav.component';
+import { AccountComponent } from './customers/new-customer/newcustomer-nav/account/account.component';
+import { ProfileComponent } from './customers/new-customer/newcustomer-nav/profile/profile.component';
+import { FinishComponent } from './customers/new-customer/newcustomer-nav/finish/finish.component';
+import { CustomerNavComponent } from './customers/customer-nav/customer-nav.component';
+import { DialogModule } from 'primeng/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -39,10 +45,14 @@ import {InputTextModule} from 'primeng/inputtext';
 		ListViewComponent,
 		CustomerOrdersComponent,
 		EditCustomerComponent,
-		CustomerNavComponent,
 		SearchViewComponent,
 		MapNavComponent,
-		CustomerDetailsComponent
+		CustomerDetailsComponent,
+		NewcustomerNavComponent,
+		AccountComponent,
+		ProfileComponent,
+		FinishComponent,
+		CustomerNavComponent
   ],
   imports: [
 		BrowserModule,
@@ -53,7 +63,9 @@ import {InputTextModule} from 'primeng/inputtext';
 		FilterPipeModule,
 		FormsModule,
 		PaginatorModule,
-		InputTextModule
+		InputTextModule,
+		DialogModule,
+		BrowserAnimationsModule
   ],
   providers: [LoginService, CustomersService, AuthGuard],
   bootstrap: [AppComponent]

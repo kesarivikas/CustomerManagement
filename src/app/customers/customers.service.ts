@@ -8,6 +8,19 @@ export class CustomersService {
 	public customerList;
 	public customer;
 	public customerID: string;
+	public newCustomer: Customers[];
+	customerProfile = {
+		customerID:'',
+		firstName: '',
+		lastName: '',
+		gender: '',
+		address: '',
+		city: '',
+		state:'',
+		zip: '',
+		email: ''
+	}
+	
   constructor(private httpClient: HttpClient) { }
 
 	getCustomers() {

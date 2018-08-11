@@ -12,6 +12,10 @@ import { MapNavComponent } from './customers/map-view/map-nav/map-nav.component'
 import { CustomerDetailsComponent } from './customers/map-view/customer-details/customer-details.component';
 import { CustomerOrdersComponent } from './customers/map-view/customer-orders/customer-orders.component';
 import { EditCustomerComponent } from './customers/map-view/edit-customer/edit-customer.component';
+import { NewcustomerNavComponent } from './customers/new-customer/newcustomer-nav/newcustomer-nav.component';
+import { AccountComponent } from './customers/new-customer/newcustomer-nav/account/account.component';
+import { ProfileComponent } from './customers/new-customer/newcustomer-nav/profile/profile.component';
+import { FinishComponent } from './customers/new-customer/newcustomer-nav/finish/finish.component';
 
 
 const routes: Routes = [
@@ -37,6 +41,14 @@ const routes: Routes = [
 			{ path: 'edit-customers', component: EditCustomerComponent },
 		],canActivate: [AuthGuard]
 	},
+	{ path: 'newcustomer-nav', component: NewcustomerNavComponent,
+		children: [
+			{ path: '', redirectTo: 'account', pathMatch: 'full' },
+			{ path: 'account', component: AccountComponent },
+			{ path: 'profile', component: ProfileComponent },
+			{ path: 'finish', component: FinishComponent },
+		]
+	}
 ];
  
 @NgModule({
