@@ -1,7 +1,7 @@
 [
 	{
 		"customerID": "1",
-		"customername": "Ravi",
+		"customerName": "Ravi",
 		"orders":[
 				{
 					"productID": "111",
@@ -24,7 +24,7 @@
 	},
 	{
 		"customerID": "2",
-		"customername": "Suman",
+		"customerName": "Suman",
 		"orders":[
 				{
 					"productID": "221",
@@ -44,5 +44,28 @@
 				}
 		],
 		"orderTotal": "$47.00"
+	},
+	{
+		"customerID": "3",
+		"customerName": "Suma",
+		"orders":[
+				{
+					"productID": "222",
+					"productName": "pen",
+					"date": "09/14/2014",
+					"quantity": "2",
+					"unitePrice": "$0.99",
+					"total": "$19.80"
+				},
+				{
+					"productID": "222",
+					"productName": "Lego city",
+					"date": "03/14/2014",
+					"quantity": "1",
+					"unitePrice": "$49.99",
+					"total": "$49.99"
+				}
+		],
+		"orderTotal": "$50.98"
 	}
 ]

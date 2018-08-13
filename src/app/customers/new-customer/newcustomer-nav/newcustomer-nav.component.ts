@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomersService } from '../../customers.service';
 
 @Component({
   selector: 'app-newcustomer-nav',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewcustomerNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(public customerService: CustomersService) { }
 
   ngOnInit() {
+		console.log('nav page profile value....', this.customerService.isProfilePage);
   }
 	
 }

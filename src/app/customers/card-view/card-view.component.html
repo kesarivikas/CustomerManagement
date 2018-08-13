@@ -1,16 +1,16 @@
 <div *ngIf="customerCard as customers">
 	<div class="row">
-		<div class="col-md-3" *ngFor="let customer of customers">
+		<div class="col-md-3 col-xs-3" *ngFor="let customer of customers">
 			<div class="customer-name row border">{{customer.firstName}}</div>
 			<div class="row border">
-				<div class="col-md-5">
+				<div class="col-md-5 col-xs-3">
 					image url
 				</div>
-					<div class="col-md-7">
+					<div class="col-md-7 col-xs-7">
 						<div>{{customer.lastName}}</div>
 						<div>{{customer.customerID}}</div>
 						<!-- <div (click)="popupModel()">Pop up</div> -->
-						<div><a [routerLink]="" (click)="popupModel(customer.email)">View Orders</a></div>
+						<div><a [routerLink]="" (click)="popupModel(customer.firstName)">View Orders</a></div>
 						
 				</div>
 			</div>
@@ -18,29 +18,29 @@
 	</div>
 </div>
 
-<p-dialog [(visible)]="display">
+<p-dialog [(visible)]="display" [responsive]="true">
 	<p-header>Ravi</p-header>
-	<!-- <p-table [value]="currentCustomer">
-    <ng-template pTemplate="header">
-			<tr>
-				<th>Product</th>
-				<th>Date</th>
-				<th>Quantity</th>
-				<th>Unit Price</th>
-				<th>Totla</th>
-			</tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-customer>
-			<tr>
-				<td>{{customer.firstName}}</td>
-				<td>{{customer.lastName}}</td>
-				<td>1</td>
-				<td>21</td>
-				<td>21</td>
-			</tr>
-    </ng-template>
-	</p-table> -->
-	<p-footer>
-			//buttons
-	</p-footer>
+		<p-table [value]="currentCustomerOrders" [responsive]="true">
+			<ng-template pTemplate="header">
+				<tr>
+					<th>Product</th>
+					<th>Date</th>
+					<th>Quantity</th>
+					<th>Unit Price</th>
+					<th>Total</th>
+				</tr>
+			</ng-template>
+			<ng-template pTemplate="body" let-order>
+				<tr>
+					<td>{{order.productName}}</td>
+					<td>{{order.date}}</td>
+					<td>{{order.quantity}}</td>
+					<td>{{order.unitePrice}}</td>
+					<td>{{order.total}}</td>
+				</tr>
+			</ng-template>
+			<ng-template pTemplate="summary">
+				{{orderTotal}}	
+			</ng-template>
+		</p-table>
 </p-dialog>

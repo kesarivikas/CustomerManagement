@@ -33,6 +33,7 @@ import { FinishComponent } from './customers/new-customer/newcustomer-nav/finish
 import { CustomerNavComponent } from './customers/customer-nav/customer-nav.component';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavService } from './nav/nav.service';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		DialogModule,
 		BrowserAnimationsModule
   ],
-  providers: [LoginService, CustomersService, AuthGuard],
+  providers: [LoginService, CustomersService, NavService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {  }

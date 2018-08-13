@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CustomersService } from '../../../customers.service';
@@ -8,12 +8,13 @@ import { CustomersService } from '../../../customers.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
-
+export class ProfileComponent implements OnInit, OnDestroy {
+	public isProfielPage: boolean = false;
   constructor(private fb: FormBuilder, private customerService: CustomersService, private router: Router) { }
 
   ngOnInit() {
-		console.log("customer profile.....",this.customerService.customerProfile.firstName);
+		this.customerService.isProfilePage = true;
+		this.populateProfileForm();
 	}
 	
 	profile: FormGroup = this.fb.group({
@@ -34,7 +35,20 @@ export class ProfileComponent implements OnInit {
 	previous() {
 		this.router.navigate(['newcustomer-nav/account']);
 	}
+
+	populateProfileForm() {
+		this.profile.patchValue({
+			address: this.customerService.customerProfile.address,
+			city: this.customerService.customerProfile.city,
+			zip: this.customerService.customerProfile.zip,
+			state: this.customerService.customerProfile.state
+		})
+	}
 	cancel() {
+		this.customerService.getCustomerProfile();
 		this.router.navigate(['/customer-nav/customer-list-view']);
+	}
+	ngOnDestroy() {
+		this.customerService.isProfilePage = false;
 	}
 }

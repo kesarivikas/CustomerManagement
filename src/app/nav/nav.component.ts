@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavService } from './nav.service';
 import { LoginService } from '../login/login.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { LoginService } from '../login/login.service';
 })
 export class NavComponent implements OnInit {
 	public isLogin: boolean;
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService, public navService: NavService) { }
 
   ngOnInit() {
 		console.log('navigation called..');

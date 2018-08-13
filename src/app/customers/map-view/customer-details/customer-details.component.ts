@@ -14,5 +14,4 @@ export class CustomerDetailsComponent implements OnInit {
 		this.customerID = this.activatedRoutes.snapshot.paramMap.get('customerID');
 		this.customerService.setCustomerId(this.customerID);
   }
-
 }

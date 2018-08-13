@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CustomersService } from '../customers.service';
 import { Customers } from '../customers';
 import { Observable } from 'rxjs/Observable';
+import { Order } from '../../orders/order-total';
 
 @Component({
   selector: 'app-card-view',
@@ -12,7 +13,8 @@ export class CardViewComponent implements OnInit {
 	//public customerCard: Observable<Customers[]>;
 	public customerCard: Customers[];
 	public display: boolean = false;
-	public currentCustomer;
+	public currentCustomerOrders: Order[];
+	public orderTotal: string;
   constructor(private customersService: CustomersService) { }
 
   ngOnInit() {
@@ -28,14 +30,18 @@ export class CardViewComponent implements OnInit {
 		console.log('customer card', this.customerCard);
 	}
 
-	popupModel(email) {
+	popupModel(name) {
 		this.display = true;
-		console.log('pop up is called...',email);
-		this.customersService.getCustomersList().forEach(customer => {
-			if( email === customer.email) {
-				this.currentCustomer = customer;
-				return true;
-			}			
+		this.customersService.getCustomerOrders().subscribe(orderTotal => {
+			orderTotal.forEach( order => {
+			 	if( name === order.customerName) {
+					this.currentCustomerOrders = order.orders;
+					this.orderTotal = order.orderTotal;
+					console.log('in order totla list.....',this.currentCustomerOrders);
+					console.log('in order totla list.....',this.currentCustomerOrders);
+			 		return true;
+			 	}	
+			 });		
 		});
 	}
 

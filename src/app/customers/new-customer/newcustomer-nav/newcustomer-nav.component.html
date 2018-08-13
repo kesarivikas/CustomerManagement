@@ -1,12 +1,12 @@
 <ul class="nav nav-pills">
 	<li class="nav-item nav-pills" [routerLinkActive]="['active']">
-			<a class="nav-link" routerLink="/newcustomer-nav/account">Account</a>
+			<a class="nav-link" routerLink="/newcustomer-nav/account" [class.disabled]='!customerService.isAccountPage'>Account</a>
 	</li>
 	<li class="nav-item nav-pills" [routerLinkActive]="['active']">
-		<a class="nav-link" routerLink="/newcustomer-nav/profile">Profile</a>
+		<a class="nav-link" routerLink="/newcustomer-nav/profile" [class.disabled]='!customerService.isProfilePage'>Profile</a>
 	</li>
 	<li class="nav-item nav-pills" [routerLinkActive]="['active']">
-		<a class="nav-link" routerLink="/newcustomer-nav/finish">Finish</a>
+		<a class="nav-link" routerLink="/newcustomer-nav/finish" [class.disabled]='!customerService.isFinishpage'>Finish</a>
 	</li>
 </ul>
 <router-outlet></router-outlet>
