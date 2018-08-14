@@ -16,6 +16,7 @@ import { NewcustomerNavComponent } from './customers/new-customer/newcustomer-na
 import { AccountComponent } from './customers/new-customer/newcustomer-nav/account/account.component';
 import { ProfileComponent } from './customers/new-customer/newcustomer-nav/profile/profile.component';
 import { FinishComponent } from './customers/new-customer/newcustomer-nav/finish/finish.component';
+import { OrdersComponent } from './orders/orders/orders.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
 	{ path: 'login', component: LoginComponent },
 	{ path: 'about', component: AboutComponent },
 	{ path: 'logout', component: LogoutComponent },
+	{ path: 'orders', component: OrdersComponent},
 	{ path: 'customer-nav', component: CustomerNavComponent,
 		children: [
 			{ path: '', redirectTo: 'customer-card-view', pathMatch: 'full' },
@@ -35,8 +37,8 @@ const routes: Routes = [
 	//{ path: 'map-view/customer-details/list.firstName', component: CustomerDetailsComponent }.component,
 	{ path: 'map-view', component: MapNavComponent, 
 		children: [
-			{ path: '', redirectTo: 'customer-details/:customerID', pathMatch: 'full' },
-			{ path: 'customer-details/:customerID', component: CustomerDetailsComponent },
+			{ path: '', redirectTo: 'customer-details', pathMatch: 'full' },
+			{ path: 'customer-details', component: CustomerDetailsComponent },
 			{ path: 'customer-orders', component: CustomerOrdersComponent },
 			{ path: 'edit-customers', component: EditCustomerComponent },
 		],canActivate: [AuthGuard]

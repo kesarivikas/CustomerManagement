@@ -34,6 +34,7 @@ import { CustomerNavComponent } from './customers/customer-nav/customer-nav.comp
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavService } from './nav/nav.service';
+import { OrdersComponent } from './orders/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { NavService } from './nav/nav.service';
 		AccountComponent,
 		ProfileComponent,
 		FinishComponent,
-		CustomerNavComponent
+		CustomerNavComponent,
+		OrdersComponent
   ],
   imports: [
 		BrowserModule,

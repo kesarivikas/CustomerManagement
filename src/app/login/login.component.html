@@ -1,4 +1,7 @@
-<div class="container">
+<div class="cms-container">
+	<div class="row col-md-2">
+		<img src="assets/images/login.jpeg" class="login">
+	</div>
   <form [formGroup]='loginForm' (ngSubmit)='login()'>
     <div class="form-group row">
       <label for="inputEmail" class="col-md-2 col-form-label">Email:</label>
@@ -18,8 +21,8 @@
 				</div>	
     </div>
     <div class="form-group row">
-      <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
-      <div class="col-md-4">
+      <label for="inputPassword" class="col-md-2 col-form-label">Password:</label>
+      <div class="col-md-4 col-sm-6">
 				<input type='password'
 				name='password'
 				minlength="8" 

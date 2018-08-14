@@ -1,1 +1,17 @@
-<p>Customer order component</p>
+<div class="order">
+	Order For {{custName}}
+</div>
+<p-table [value]="customerOrders" *ngIf='customerOrders else noOrderFound'>
+	<ng-template pTemplate="body" let-order>
+			<tr>
+				<td>{{order.productName}}</td>
+				<td>{{order.total}}</td>
+			</tr>
+	</ng-template>
+	<ng-template pTemplate="footer">
+		{{totalCost}}
+	</ng-template>
+</p-table>
+<ng-template #noOrderFound>
+	Order Not Found
+</ng-template>

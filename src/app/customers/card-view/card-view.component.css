@@ -1,4 +1,9 @@
-.customer-name{
+.photo {
+	height: 100px;
+  width: 100px;
+}
+
+.customer-name {
 	background-color: #007bff
 }
 @media (min-width: 1200px){
@@ -17,3 +22,24 @@
 	margin-left: 0px;
 }
 
+.ui-dialog-content .ui-widget-content {
+	border: 1px solid #D5D5D5;
+	background: #ffffff;
+}
+
+.ui-dialog {
+	position: fixed;
+	padding: 0;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+	padding: .5em .75em;
+	position: fixed;
+}
+
+.ui-dialog-titlebar .ui-widget-header {
+	border: 1px solid #323232;
+	background-color: #007bff !important;
+	color: #cccccc;
+	font-weight: bold;
+}

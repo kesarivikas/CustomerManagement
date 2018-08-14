@@ -1,0 +1,26 @@
+<div *ngFor='let order of orderList'>
+
+		<p-table [value]="order.orders" class="abc">
+				<ng-template pTemplate="caption">
+					{{order.customerName}}
+				</ng-template>
+				<ng-template pTemplate="header">
+						<tr>
+							<th>Product</th>
+							<th>Date</th>
+							<th>Quantity</th>
+							<th>Unit Price</th>
+							<th>Total</th>
+						</tr>
+				</ng-template>
+				<ng-template pTemplate="body" let-order>
+					<tr>
+						<td>{{order.productName}}</td>
+						<td>{{order.date}}</td>
+						<td>{{order.quantity}}</td>
+						<td>{{order.unitePrice}}</td>
+						<td>{{order.total}}</td>
+					</tr>
+				</ng-template>
+		</p-table>
+</div>

@@ -10,4 +10,5 @@ export interface Customers {
 	zip: string ;
 	orders: string;
 	orderTotal: string;
+	imageUrl: string;
 }

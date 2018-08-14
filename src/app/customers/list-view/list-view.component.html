@@ -2,6 +2,7 @@
 <p-table [value]="customers" *ngIf="customerList as customers">
 	<ng-template pTemplate="header">
 		<tr>
+			<th></th>
 			<th>First Name</th>
 			<th>Last Name</th>
 			<th>Address</th>
@@ -12,7 +13,9 @@
 	</ng-template>
 	<ng-template pTemplate="body" let-list>
 		<tr>
-			<td><a routerLink="/map-view/customer-details/{{list.customerID}}">{{list.firstName}}</a></td>
+			<td><img src="{{list.imageUrl}}" class='photo'></td>
+			<!-- <td><a routerLink="/map-view/customer-details/{{list.customerID}}">{{list.firstName}}</a></td> -->
+			<td><a [routerLink]="['/map-view/customer-details']" [queryParams]="{firstName: list.firstName}">{{list.firstName}}</a></td>
 			<td>{{list.lastName}}</td>
 			<td>{{list.address}}</td>
 			<td>{{list.city}}</td>

@@ -27,7 +27,6 @@ export class CardViewComponent implements OnInit {
 				this.customersService.setCustomersList(data);
 			})
 		}
-		console.log('customer card', this.customerCard);
 	}
 
 	popupModel(name) {

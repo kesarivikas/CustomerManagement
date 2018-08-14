@@ -1,12 +1,12 @@
 <ul class="nav">
   <li class="nav-item" [routerLinkActive]="['active']">
-		<a class="nav-link" routerLink="/map-view/customer-details/:customerID">Customers Details</a>
+		<a class="nav-link" [routerLink]="['/map-view/customer-details']" [queryParams]="{firstName: firstName}">Customers Details</a>
 	</li>
   <li class="nav-item" [routerLinkActive]="['active']">
-		<a class="nav-link" routerLink="/map-view/customer-orders">Customers Orders</a>
+		<a class="nav-link" [routerLink]="['/map-view/customer-orders']" [queryParams]="{firstName: firstName}">Customers Orders</a>
 	</li>
   <li class="nav-item" [routerLinkActive]="['active']">
-		<a class="nav-link" routerLink="/map-view/edit-customers">Edit Customers</a>
+		<a class="nav-link" [routerLink]="['/map-view/edit-customers']" [queryParams]="{firstName: firstName}">Edit Customers</a>
 	</li>
 </ul>
 <router-outlet></router-outlet>

@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { CustomersService } from '../../customers.service';
 import { Observable } from 'rxjs/Observable';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Customers } from '../../customers';
 
 @Component({
@@ -14,14 +14,15 @@ import { Customers } from '../../customers';
 export class EditCustomerComponent implements OnInit {
 	public custId: string;
 	public updatedCustomerList: Customers[];
-  constructor( private fb: FormBuilder, private customerService: CustomersService, private activatedRoutes: ActivatedRoute) { }
+  constructor( private fb: FormBuilder, private customerService: CustomersService, private activatedRoutes: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-		this.custId = this.customerService.getCustomerId();
+		//this.custId = this.customerService.getCustomerId();
+		const firstName = this.activatedRoutes.snapshot.queryParamMap.get('firstName');
 		let self = this;
 		this.customerService.getCustomers().subscribe( data => {
 			data.forEach(function(customer) {
-				if(customer.customerID === self.custId) {
+				if(customer.firstName === firstName) {
 					self.customerService.customer = customer;
 					self.pupulateEditForm(self.customerService.customer);
 				}
@@ -44,6 +45,7 @@ export class EditCustomerComponent implements OnInit {
 			firstName: customer.firstName,
 			lastName: customer.lastName,
 			email: customer.email,
+			gender: customer.gender,
 			address: customer.address,
 			city: customer.city,
 			zip: customer.zip
@@ -59,6 +61,7 @@ export class EditCustomerComponent implements OnInit {
 					customer.lastName = self.editCustomerProfile.controls.lastName.value;
 					customer.address = self.editCustomerProfile.controls.address.value;
 					customer.city = self.editCustomerProfile.controls.city.value;
+					customer.gender = self.editCustomerProfile.controls.gender.value;
 					customer.email = self.editCustomerProfile.controls.email.value;
 					customer.zip = self.editCustomerProfile.controls.zip.value;
 				}
@@ -69,6 +72,13 @@ export class EditCustomerComponent implements OnInit {
 	}
 
 	deleteCustomer() {
-
+		this.updatedCustomerList = [];
+		this.customerService.getCustomersList().forEach(customer => {
+			if( customer.firstName !== this.editCustomerProfile.get('firstName').value) {
+				this.updatedCustomerList.push(customer);
+			}
+		});
+		this.customerService.setCustomersList(this.updatedCustomerList);
+		this.router.navigate(['/customer-nav/customer-list-view']);
 	}
 }

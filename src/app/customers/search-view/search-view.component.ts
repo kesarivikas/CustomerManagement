@@ -30,7 +30,6 @@ export class SearchViewComponent implements OnInit {
 				this.customers.push(customer);
 			}
 		});
-		console.log('newly list....', this.customers);
 		this.customer.setCustomersList(this.customers);
 	}
 

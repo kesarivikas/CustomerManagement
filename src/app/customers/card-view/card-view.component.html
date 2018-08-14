@@ -1,17 +1,17 @@
 <div *ngIf="customerCard as customers">
 	<div class="row">
 		<div class="col-md-3 col-xs-3" *ngFor="let customer of customers">
-			<div class="customer-name row border">{{customer.firstName}}</div>
+			<div class="customer-name row border">{{customer.firstName}} {{customer.lastName}}</div>
 			<div class="row border">
 				<div class="col-md-5 col-xs-3">
-					image url
+					<img src="{{customer.imageUrl}}" class="photo">
 				</div>
 					<div class="col-md-7 col-xs-7">
-						<div>{{customer.lastName}}</div>
-						<div>{{customer.customerID}}</div>
-						<!-- <div (click)="popupModel()">Pop up</div> -->
-						<div><a [routerLink]="" (click)="popupModel(customer.firstName)">View Orders</a></div>
-						
+						<div>{{customer.city}},</div>
+						<div>{{customer.state}}</div>
+						<div>
+							<a [routerLink]="" (click)="popupModel(customer.firstName)">View Orders</a>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 					<td>{{order.total}}</td>
 				</tr>
 			</ng-template>
-			<ng-template pTemplate="summary">
+			<ng-template pTemplate="footer">
 				{{orderTotal}}	
 			</ng-template>
 		</p-table>

@@ -23,7 +23,8 @@ export class CustomersService {
 		city: '',
 		state:'',
 		zip: '',
-		email: ''
+		email: '',
+		imageUrl:''
 	}
 	
   constructor(private httpClient: HttpClient) { }
@@ -70,7 +71,8 @@ export class CustomersService {
 			city: '',
 			state:'',
 			zip: '',
-			email: ''
+			email: '',
+			imageUrl:''
 		}
 	}
 }

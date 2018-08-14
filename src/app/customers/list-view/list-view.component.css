@@ -5,3 +5,8 @@
 .ui-table-wrapper .ui-table table {
 	width: auto;
 }
+
+.photo {
+	height: 50px;
+	width: 100px;
+}

@@ -10,7 +10,8 @@
 		"email": "ravi.sawant@gmail.com",
 		"zip": "400123",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/male.jpeg"
 	},
 	{
 		"customerID": "2",
@@ -23,7 +24,8 @@
 		"email": "suman.rawat@gmail.com",
 		"zip": "41233",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/female.jpeg"
 	},
 	{
 		"customerID": "3",
@@ -36,7 +38,8 @@
 		"email": "suman.shinde@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/female.jpeg"
 	},
 	{
 		"customerID": "4",
@@ -49,7 +52,8 @@
 		"email": "raju.Rajan@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/male.jpeg"
 	},
 	{
 		"customerID": "5",
@@ -62,7 +66,8 @@
 		"email": "deepali.khot@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/female.jpeg"
 	},
 	{
 		"customerID": "6",
@@ -75,7 +80,8 @@
 		"email": "reena.khot@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/female.jpeg"
 	},
 	{
 		"customerID": "7",
@@ -88,7 +94,8 @@
 		"email": "shilpa.yadav@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/female.jpeg"
 	},
 	{
 		"customerID": "8",
@@ -101,7 +108,8 @@
 		"email": "laxmi.yadav@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/female.jpeg"
 	},
 	{
 		"customerID": "9",
@@ -114,7 +122,8 @@
 		"email": "neha.shah@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/female.jpeg"
 	},
 	{
 		"customerID": "10",
@@ -127,7 +136,8 @@
 		"email": "atul.rawat@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/male.jpeg"
 	},
 	{
 		"customerID": "11",
@@ -140,7 +150,8 @@
 		"email": "ritik.tiwari@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/male.jpeg"
 	},
 	{
 		"customerID": "12",
@@ -153,6 +164,7 @@
 		"email": "om.gupta@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00"
+		"orderTotal": "$47.00",
+		"imageUrl": "assets/images/male.jpeg"
 	}
 ]
