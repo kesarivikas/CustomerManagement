@@ -12,13 +12,14 @@ import { Customers } from '../customers';
 export class SearchViewComponent implements OnInit {
 
 	customers: Customers[];
+	searchText: boolean = false;
 	userFilter: any = { firstName: ''};
 
   constructor(private customer: CustomersService) { }
 
   ngOnInit() {
 		this.customer.getCustomers().subscribe(data => {
-			this.customers = data
+			this.customers = data;
 			this.customer.setCustomersList(data);
 		});
 	}
@@ -33,11 +34,7 @@ export class SearchViewComponent implements OnInit {
 		this.customer.setCustomersList(this.customers);
 	}
 
-	paginate(event) {
-		console.log('paginator method is called.....');
-		event.first = 1; //Index of the first record
-		event.rows = 3; //Number of rows to display in new page
-		//event.page = Index of the new page
-		event.pageCount = 10;//Total number of pages
+	autosuggest() {
+		this.searchText = true;
 	}
 }

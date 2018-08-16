@@ -1,15 +1,15 @@
 <div class="order">
 	Order For {{custName}}
 </div>
-<p-table [value]="customerOrders" *ngIf='customerOrders else noOrderFound'>
+<p-table [value]="customerOrders" *ngIf='customerOrders else noOrderFound' class="table-striped">
 	<ng-template pTemplate="body" let-order>
-			<tr>
+			<tr class="table-data">
 				<td>{{order.productName}}</td>
 				<td>{{order.total}}</td>
 			</tr>
 	</ng-template>
-	<ng-template pTemplate="footer">
-		{{totalCost}}
+	<ng-template pTemplate="summary" class="order-total">
+		<p class="order-total">{{totalCost}}</p>
 	</ng-template>
 </p-table>
 <ng-template #noOrderFound>

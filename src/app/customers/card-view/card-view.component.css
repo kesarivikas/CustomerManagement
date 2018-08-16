@@ -21,8 +21,10 @@
 	margin-right: 0px;
 	margin-left: 0px;
 }
-
-.ui-dialog-content .ui-widget-content {
+.close{
+	height: 25px;
+}
+/* .ui-dialog-content .ui-widget-content {
 	border: 1px solid #D5D5D5;
 	background: #ffffff;
 }
@@ -42,4 +44,32 @@
 	background-color: #007bff !important;
 	color: #cccccc;
 	font-weight: bold;
+} */
+
+/* .ui-dialog-titlebar {
+	background-color:;
+} */
+.customDialog .ui-widget-header .ui-dialog-title {
+	background: #ffffff;
+		height: auto;
+
+			font-weight: 400;
+			font-style: normal;
+			color: black;
+			font-size: 18px !important;
+			line-height: 0;
+}
+
+.ui-dialog-titlebar.ui-widget-header.customDialog {
+	background: green;
+	color: black;
+	box-shadow: none;
+}
+
+.customDialog .ui-dialog-titlebar {
+  background: #ffffff;
+}
+
+p-dialog .ui-widget-content {
+  background: #ffffff !important; 
 }

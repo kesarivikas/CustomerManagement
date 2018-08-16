@@ -1,7 +1,7 @@
 <!-- <p-table [value]="customers" *ngIf="customerList | async as customers"> -->
-<p-table [value]="customers" *ngIf="customerList as customers">
+<p-table [value]="customers" *ngIf="customerList as customers" class="table-striped">
 	<ng-template pTemplate="header">
-		<tr>
+		<tr class='table-heading'>
 			<th></th>
 			<th>First Name</th>
 			<th>Last Name</th>
@@ -12,7 +12,7 @@
 		</tr>
 	</ng-template>
 	<ng-template pTemplate="body" let-list>
-		<tr>
+		<tr class='table-data'>
 			<td><img src="{{list.imageUrl}}" class='photo'></td>
 			<!-- <td><a routerLink="/map-view/customer-details/{{list.customerID}}">{{list.firstName}}</a></td> -->
 			<td><a [routerLink]="['/map-view/customer-details']" [queryParams]="{firstName: list.firstName}">{{list.firstName}}</a></td>

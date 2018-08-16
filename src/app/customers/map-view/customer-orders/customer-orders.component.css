@@ -1,0 +1,19 @@
+.order {
+	padding-top: 35px;
+	padding-bottom: 20px;
+}
+tr.table-data {
+	background-color: transparent;
+	border: none;
+	color: black;
+}
+
+.table-data td {
+	border: none;
+}
+
+.ui-widget-header {
+	border: none;
+  background-color:transparent;
+  color:black;
+}

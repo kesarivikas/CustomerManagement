@@ -1,6 +1,9 @@
 <div>
 	<label for="fname" class="col-sm-2 col-form-label">Filter: </label>
-	<input type="text" [(ngModel)]="userFilter.firstName" placeholder="First Name">
+	<input type="text" [(ngModel)]="userFilter.firstName" placeholder="First Name" (keydown)="autosuggest(userFilter.firstName)">
+		<ul *ngIf="searchText">
+			<li *ngFor="let customer of customers | filterBy: userFilter">{{ customer.firstName }}</li>
+		</ul>
 		<p-table [value]="customers | filterBy: userFilter" 
 						*ngIf="(customers | filterBy: userFilter)?.length else noUserFound"
 						[paginator]="true" [rows]="5">
@@ -27,5 +30,4 @@
 			No data found
 		</ng-template>
 </div>
-<!-- <p-paginator [rows]="10" [totalRecords]="100"></p-paginator> -->
 

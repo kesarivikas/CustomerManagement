@@ -1,3 +1,9 @@
+<div class="edit-customer">
+	<h5>Edit Customer</h5>
+	<h5>
+		{{firstName}} {{lastName}} <a [routerLink]="['/map-view/customer-orders']" [queryParams]="{firstName: firstName}">(View Orders)</a>
+	</h5>
+</div>
 <form [formGroup]='editCustomerProfile'>
 	<div class="form-group row">
 		<label for="firstname" class="col-sm-2 col-form-label">Firstname:</label>

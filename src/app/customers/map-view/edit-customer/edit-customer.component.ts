@@ -14,15 +14,18 @@ import { Customers } from '../../customers';
 export class EditCustomerComponent implements OnInit {
 	public custId: string;
 	public updatedCustomerList: Customers[];
+	public firstName: string;
+	public lastName: string;
   constructor( private fb: FormBuilder, private customerService: CustomersService, private activatedRoutes: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
 		//this.custId = this.customerService.getCustomerId();
-		const firstName = this.activatedRoutes.snapshot.queryParamMap.get('firstName');
+		this.firstName = this.activatedRoutes.snapshot.queryParamMap.get('firstName');
 		let self = this;
 		this.customerService.getCustomers().subscribe( data => {
 			data.forEach(function(customer) {
-				if(customer.firstName === firstName) {
+				if(customer.firstName === self.firstName) {
+					self.lastName = customer.lastName;
 					self.customerService.customer = customer;
 					self.pupulateEditForm(self.customerService.customer);
 				}

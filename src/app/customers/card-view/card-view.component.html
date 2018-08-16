@@ -1,3 +1,7 @@
+<!-- <div class="row">
+	<label for="Search Suggetion" class="col-md-2 col-form-label">Filter:</label>
+	<input type="text" #firstName placeholder="First Name">
+</div> -->
 <div *ngIf="customerCard as customers">
 	<div class="row">
 		<div class="col-md-3 col-xs-3" *ngFor="let customer of customers">
@@ -18,9 +22,13 @@
 	</div>
 </div>
 
-<p-dialog [(visible)]="display" [responsive]="true">
-	<p-header>Ravi</p-header>
-		<p-table [value]="currentCustomerOrders" [responsive]="true">
+<p-dialog [(visible)]="display" [responsive]="true" class="pdialog" width="500" styleClass="customDialog">
+	<p-header class='pheader'>{{customerName}}
+		<a [routerLink]="" (click)="closePopUp()">
+			<img src='assets/images/cross.png' align="right" class='close'>
+		</a>	
+	</p-header>
+		<p-table [value]="currentCustomerOrders" [responsive]="true" class='ptable'>
 			<ng-template pTemplate="header">
 				<tr>
 					<th>Product</th>
