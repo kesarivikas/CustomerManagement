@@ -1,6 +1,7 @@
 export class OrderTotal {
 	"customerID": string;
 	"customerName": string;
+	"lastName": string;
 	"orders": Order[];
 	"orderTotal": "$47.00"
 }

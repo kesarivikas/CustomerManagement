@@ -1,10 +1,10 @@
-<!-- <div class="row">
-	<label for="Search Suggetion" class="col-md-2 col-form-label">Filter:</label>
-	<input type="text" #firstName placeholder="First Name">
-</div> -->
-<div *ngIf="customerCard as customers">
+ <div class="row">
+	<label for="fname" class="col-sm-2 col-form-label">Filter: </label>
+	<input type="text" #firstName placeholder="First Name" class="col-sm-2">
+</div>
+<div *ngIf="customerCard?.length else noUserFound">
 	<div class="row">
-		<div class="col-md-3 col-xs-3" *ngFor="let customer of customers">
+		<div class="col-md-3 col-xs-3" *ngFor="let customer of customerCard">
 			<div class="customer-name row border">{{customer.firstName}} {{customer.lastName}}</div>
 			<div class="row border">
 				<div class="col-md-5 col-xs-3">
@@ -21,6 +21,10 @@
 		</div>
 	</div>
 </div>
+
+<ng-template #noUserFound>
+	No record found.
+</ng-template>
 
 <p-dialog [(visible)]="display" [responsive]="true" class="pdialog" width="500" styleClass="customDialog">
 	<p-header class='pheader'>{{customerName}}

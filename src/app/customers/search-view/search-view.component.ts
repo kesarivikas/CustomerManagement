@@ -18,6 +18,7 @@ export class SearchViewComponent implements OnInit {
   constructor(private customer: CustomersService) { }
 
   ngOnInit() {
+		console.log('search view is called....');
 		this.customer.getCustomers().subscribe(data => {
 			this.customers = data;
 			this.customer.setCustomersList(data);
@@ -32,9 +33,5 @@ export class SearchViewComponent implements OnInit {
 			}
 		});
 		this.customer.setCustomersList(this.customers);
-	}
-
-	autosuggest() {
-		this.searchText = true;
 	}
 }

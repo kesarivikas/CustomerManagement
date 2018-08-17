@@ -1,5 +1,5 @@
 <!-- <p-table [value]="customers" *ngIf="customerList | async as customers"> -->
-<p-table [value]="customers" *ngIf="customerList as customers" class="table-striped">
+<p-table [value]="customers" *ngIf="customerList as customers" [paginator]="true" [rows]="5" class="table-striped" [responsive]='true'>
 	<ng-template pTemplate="header">
 		<tr class='table-heading'>
 			<th></th>

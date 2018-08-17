@@ -2,3 +2,20 @@
 	height: 50px;
 	width: 100px;
 }
+
+.table-heading th {
+	background-color: transparent;
+	border: none;
+	color: black;
+	font-weight: 400;
+}
+
+tr.table-data {
+	background-color: transparent;
+	border: none;
+	color: black;
+}
+
+.ui-table-tbody  tr {
+	background-color: transparent;
+}

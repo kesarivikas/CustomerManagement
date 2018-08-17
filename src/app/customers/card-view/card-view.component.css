@@ -73,3 +73,7 @@
 p-dialog .ui-widget-content {
   background: #ffffff !important; 
 }
+
+.customDialog .ui-dialog-titlebar.ui-widget-header {
+	background: green !important;
+}

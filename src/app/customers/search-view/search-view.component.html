@@ -1,14 +1,15 @@
 <div>
-	<label for="fname" class="col-sm-2 col-form-label">Filter: </label>
-	<input type="text" [(ngModel)]="userFilter.firstName" placeholder="First Name" (keydown)="autosuggest(userFilter.firstName)">
-		<ul *ngIf="searchText">
-			<li *ngFor="let customer of customers | filterBy: userFilter">{{ customer.firstName }}</li>
+	<label for="fname" class="col-form-label">Filter:</label>
+	<input type="text" [(ngModel)]="userFilter.firstName" placeholder="First Name">
+		<ul *ngIf="userFilter.firstName" >
+			<li *ngFor="let customer of customers | filterBy: userFilter" class="suggestions">{{ customer.firstName }}</li>
 		</ul>
 		<p-table [value]="customers | filterBy: userFilter" 
 						*ngIf="(customers | filterBy: userFilter)?.length else noUserFound"
-						[paginator]="true" [rows]="5">
+						[responsive]='true'
+						class="table-striped">
 			<ng-template pTemplate="header">
-				<tr>
+				<tr class='table-heading bg-primary'>
 					<th></th>
 					<th>First Name</th>
 					<th>Location</th>
@@ -17,10 +18,10 @@
 				</tr>
 			</ng-template>
 			<ng-template pTemplate="body" let-customer >
-				<tr>
+				<tr class='table-data'>
 					<td><img src="{{customer.imageUrl}}" class="photo"></td>
-					<td>{{customer.firstName}}</td>
-					<td>{{customer.address}},{{customer.city}},{{customer.state}}</td>
+					<td>{{customer.firstName}} {{customer.lastName}}</td>
+					<td>{{customer.city}},{{customer.state}}</td>
 					<td>{{customer.orders}}</td>
 					<td><button (click)="deleteCustomer(customer.customerID)" class="btn btn-danger">Delete</button></td>
 				</tr>

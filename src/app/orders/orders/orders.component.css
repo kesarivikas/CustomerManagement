@@ -1,3 +1,25 @@
 .abc.ui-table {
 	margin-top: 30px;
 }
+
+
+.table-heading th {
+	background-color: transparent;
+	border: none;
+	color: black;
+	font-weight: 400;
+}
+
+tr.table-data {
+	background-color: transparent;
+	border: none;
+	color: black;
+}
+
+.table-heading {
+	margin-top: 30px;
+}
+
+.ui-table-caption123{
+	background-color: transparent;
+}

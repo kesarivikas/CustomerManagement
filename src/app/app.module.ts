@@ -35,6 +35,7 @@ import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavService } from './nav/nav.service';
 import { OrdersComponent } from './orders/orders/orders.component';
+import {AutoCompleteModule} from 'primeng/autocomplete';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { OrdersComponent } from './orders/orders/orders.component';
 		PaginatorModule,
 		InputTextModule,
 		DialogModule,
-		BrowserAnimationsModule
+		BrowserAnimationsModule,
+		AutoCompleteModule
   ],
   providers: [LoginService, CustomersService, NavService, AuthGuard],
   bootstrap: [AppComponent]
