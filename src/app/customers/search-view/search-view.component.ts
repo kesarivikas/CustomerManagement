@@ -18,11 +18,14 @@ export class SearchViewComponent implements OnInit {
   constructor(private customer: CustomersService) { }
 
   ngOnInit() {
-		console.log('search view is called....');
-		this.customer.getCustomers().subscribe(data => {
-			this.customers = data;
-			this.customer.setCustomersList(data);
-		});
+		if(this.customer.getCustomersList()) {
+			this.customers = this.customer.getCustomersList();
+		} else {
+			this.customer.getCustomers().subscribe(data => {
+				this.customers = data;
+				this.customer.setCustomersList(data);
+			});
+		}
 	}
 	
 	deleteCustomer(customerId) {

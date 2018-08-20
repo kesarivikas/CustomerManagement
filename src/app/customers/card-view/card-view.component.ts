@@ -20,6 +20,9 @@ export class CardViewComponent implements OnInit {
 	public orderTotal: string;
 	public customerName: string;
 	public searchResult: any[];
+	public p: number = 1;
+   // collection: any[] = someArrayOfThings;  
+
   constructor(private customersService: CustomersService) { }
 
   ngOnInit() {

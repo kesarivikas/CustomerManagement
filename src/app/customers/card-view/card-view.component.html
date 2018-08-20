@@ -1,11 +1,14 @@
  <div class="row">
 	<label for="fname" class="col-sm-2 col-form-label">Filter: </label>
-	<input type="text" #firstName placeholder="First Name" class="col-sm-2">
+	<input type="text" #firstName placeholder="First Name" class="col-xs-4 col-md-2">
 </div>
 <div *ngIf="customerCard?.length else noUserFound">
 	<div class="row">
-		<div class="col-md-3 col-xs-3" *ngFor="let customer of customerCard">
-			<div class="customer-name row border">{{customer.firstName}} {{customer.lastName}}</div>
+		<div class="col-md-3 col-xs-3" *ngFor="let customer of customerCard | paginate: { itemsPerPage: 8, currentPage: p }">
+			<!-- <div *ngFor="let item of customerCard | paginate: { itemsPerPage: 8, currentPage: p }"> -->
+			<div class="customer-name border">{{customer.firstName}} {{customer.lastName}}
+				<img src="assets/images/edit.jpeg" class="img">
+			</div>
 			<div class="row border">
 				<div class="col-md-5 col-xs-3">
 					<img src="{{customer.imageUrl}}" class="photo">
@@ -18,6 +21,7 @@
 						</div>
 				</div>
 			</div>
+			<!-- </div> -->
 		</div>
 	</div>
 </div>
@@ -56,3 +60,9 @@
 			</ng-template>
 		</p-table>
 </p-dialog>
+
+<!-- <ul>
+	<div *ngFor="let item of customerCard | paginate: { itemsPerPage: 5, currentPage: p }">asdf </div>
+</ul> -->
+					 
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

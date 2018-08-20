@@ -1,8 +1,3 @@
-.photo {
-	height: 50px;
-	width: 100px;
-}
-
 .table-heading th {
 	background-color: transparent;
 	border: none;
@@ -18,4 +13,23 @@ tr.table-data {
 
 .ui-table-tbody  tr {
 	background-color: transparent;
+}
+
+
+.customer-name {
+	position: absolute;
+	z-index: 1;
+	width: 222px;
+	max-height: 300px;
+	background: #ffffff;
+	overflow-y: auto;
+}
+
+.suggestions {
+	padding: 10px;
+	color: #007bff;
+}
+
+.suggestions:hover {
+	background: #ffffff;
 }

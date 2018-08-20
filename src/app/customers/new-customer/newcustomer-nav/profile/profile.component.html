@@ -1,4 +1,4 @@
-<form [formGroup]='profile'>
+<form [formGroup]='profile' class="cms-container">
 	<div class="form-group row">
 		<label for="address" class="col-md-10 col-form-label">Address:</label>
 		<div class="col-md-3">
@@ -9,7 +9,7 @@
 							placeholder='address'>	
 			</div>
 			<div class='has-error col-md-3'>
-				<span *ngIf="(profile.get('address').touched || profile.get('address').dirty)">
+				<span *ngIf="(profile.get('address').touched || profile.get('address').dirty)" class="alert-danger">
 					<span *ngIf="profile.get('address').errors?.required">
 						Please enter address.
 					</span>	
@@ -26,7 +26,7 @@
 								placeholder='city'>	
 			</div>
 			<div class='has-error col-md-3'>
-				<span *ngIf="(profile.get('city').touched || profile.get('city').dirty)">
+				<span *ngIf="(profile.get('city').touched || profile.get('city').dirty)" class="alert-danger">
 					<span *ngIf="profile.get('city').errors?.required">
 						Please enter city.
 					</span>	
@@ -43,7 +43,7 @@
 								placeholder='zip'>	
 				</div>
 				<div class='has-error col-md-3'>
-					<span *ngIf="(profile.get('zip').touched || profile.get('zip').dirty)">
+					<span *ngIf="(profile.get('zip').touched || profile.get('zip').dirty)" class="alert-danger">
 						<span *ngIf="profile.get('zip').errors?.required">
 							Please enter zip.
 						</span>	
@@ -60,7 +60,7 @@
 								placeholder='state'>	
 				</div>
 				<div class='has-error col-md-3'>
-					<span *ngIf="(profile.get('state').touched || profile.get('state').dirty)">
+					<span *ngIf="(profile.get('state').touched || profile.get('state').dirty)" class="alert-danger">
 						<span *ngIf="profile.get('state').errors?.required">
 							Please enter zip.
 						</span>	

@@ -1,15 +1,15 @@
-<form [formGroup]='finish'>
+<form [formGroup]='finish' class="cms-container" novalidate>
 	<div class="form-group row">
 		<label for="email" class="col-md-10 col-form-label">Email:</label>
 		<div class="col-md-3">
-			<input 	type='email' 
+			<input 	type="email" 
 							name='email' 
 							formControlName='email'
 							class="form-control"
 							placeholder='email'>	
 			</div>
 			<div class='has-error col-md-3'>
-				<span *ngIf="(finish.get('email').touched || finish.get('email').dirty)">
+				<span *ngIf="(finish.get('email').touched || finish.get('email').dirty)" class="alert-danger">
 					<span *ngIf="finish.get('email').errors?.required">
 						Please enter email.
 					</span>	

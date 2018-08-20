@@ -18,7 +18,7 @@ export class FinishComponent implements OnInit, OnDestroy {
   }
 
 	finish: FormGroup = this.fb.group({
-		email: ['', Validators.required],
+		email: ['', [Validators.required, Validators.email]],
 	});
 
 	submit() {

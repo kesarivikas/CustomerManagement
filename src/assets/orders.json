@@ -21,7 +21,7 @@
 					"total": "$20.00"
 				}
 		],
-		"orderTotal": "$47.00"
+		"orderTotal": "$49.00"
 	},
 	{
 		"customerID": "2",
@@ -45,7 +45,7 @@
 					"total": "$20.00"
 				}
 		],
-		"orderTotal": "$47.00"
+		"orderTotal": "$49.00"
 	},
 	{
 		"customerID": "3",
@@ -69,7 +69,7 @@
 					"total": "$49.99"
 				}
 		],
-		"orderTotal": "$50.98"
+		"orderTotal": "$69.79"
 	},
 	{
 		"customerID": "4",
@@ -93,7 +93,7 @@
 				"total": "$49.99"
 			}
 		],
-		"orderTotal": "$50.98"
+		"orderTotal": "$69.79"
 	},
 	{
 		"customerID": "5",
@@ -117,7 +117,7 @@
 					"total": "$20.00"
 				}
 		],
-		"orderTotal": "$47.00"
+		"orderTotal": "$49.00"
 	},
 	{
 		"customerID": "6",
@@ -141,7 +141,7 @@
 				"total": "$49.99"
 			}
 		],
-		"orderTotal": "$50.98"
+		"orderTotal": "$69.79"
 	},
 	{
 		"customerID": "7",
@@ -165,7 +165,7 @@
 					"total": "$20.00"
 				}
 		],
-		"orderTotal": "$47.00"
+		"orderTotal": "$49.00"
 	},
 	{
 		"customerID": "7",
@@ -189,7 +189,7 @@
 					"total": "$20.00"
 				}
 		],
-		"orderTotal": "$47.00"
+		"orderTotal": "$49.00"
 	},
 	{
 		"customerID": "9",
@@ -213,7 +213,7 @@
 					"total": "$20.00"
 				}
 		],
-		"orderTotal": "$47.00"
+		"orderTotal": "$49.00"
 	},
 	{
 		"customerID": "10",
@@ -237,7 +237,7 @@
 					"total": "$20.00"
 				}
 		],
-		"orderTotal": "$47.00"
+		"orderTotal": "$49.00"
 	},
 	{
 		"customerID": "11",
@@ -293,6 +293,6 @@
 					"total": "$20.00"
 				}
 		],
-		"orderTotal": "$67.00"
+		"orderTotal": "$69.00"
 	}
 ]

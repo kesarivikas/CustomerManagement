@@ -36,6 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavService } from './nav/nav.service';
 import { OrdersComponent } from './orders/orders/orders.component';
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
 		InputTextModule,
 		DialogModule,
 		BrowserAnimationsModule,
-		AutoCompleteModule
+		AutoCompleteModule,
+		NgxPaginationModule
   ],
   providers: [LoginService, CustomersService, NavService, AuthGuard],
   bootstrap: [AppComponent]

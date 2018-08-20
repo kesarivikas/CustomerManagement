@@ -10,7 +10,7 @@
 		"email": "ravi.sawant@gmail.com",
 		"zip": "400123",
 		"orders": "2",
-		"orderTotal": "$47.00",
+		"orderTotal": "$49.00",
 		"imageUrl": "assets/images/male.jpeg"
 	},
 	{
@@ -24,7 +24,7 @@
 		"email": "suman.rawat@gmail.com",
 		"zip": "41233",
 		"orders": "2",
-		"orderTotal": "$47.00",
+		"orderTotal": "$49.00",
 		"imageUrl": "assets/images/female.jpeg"
 	},
 	{
@@ -38,7 +38,7 @@
 		"email": "suman.shinde@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00",
+		"orderTotal": "$49.00",
 		"imageUrl": "assets/images/female.jpeg"
 	},
 	{
@@ -52,7 +52,7 @@
 		"email": "raju.Rajan@gmail.com",
 		"zip": "400064",
 		"orders": "2",
-		"orderTotal": "$47.00",
+		"orderTotal": "$49.00",
 		"imageUrl": "assets/images/male.jpeg"
 	},
 	{
@@ -163,7 +163,7 @@
 		"gender": "male",
 		"email": "om.gupta@gmail.com",
 		"zip": "400064",
-		"orders": "2",
+		"orders": "3",
 		"orderTotal": "$47.00",
 		"imageUrl": "assets/images/male.jpeg"
 	}

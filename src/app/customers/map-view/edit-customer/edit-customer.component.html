@@ -1,10 +1,10 @@
-<div class="edit-customer">
+<div class="edit-customer cms-container">
 	<h5>Edit Customer</h5>
 	<h5>
 		{{firstName}} {{lastName}} <a [routerLink]="['/map-view/customer-orders']" [queryParams]="{firstName: firstName}">(View Orders)</a>
 	</h5>
 </div>
-<form [formGroup]='editCustomerProfile'>
+<form [formGroup]='editCustomerProfile' class="cms-container">
 	<div class="form-group row">
 		<label for="firstname" class="col-sm-2 col-form-label">Firstname:</label>
 		<div class="col-md-3">
