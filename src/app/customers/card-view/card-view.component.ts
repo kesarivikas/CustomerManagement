@@ -20,6 +20,10 @@ export class CardViewComponent implements OnInit {
 	public orderTotal: string;
 	public customerName: string;
 	public searchResult: any[];
+	public city: string;
+	public state: string;
+	public lastName: string;
+	public photo: string;
 	public p: number = 1;
    // collection: any[] = someArrayOfThings;  
 
@@ -40,12 +44,21 @@ export class CardViewComponent implements OnInit {
 
 	popupModel(name) {
 		this.display = true;
+		console.log("customer details list. for popup...",this.customersService.getCustomersList());
+		this.customersService.getCustomersList().forEach(customer =>{
+			if (name === customer.firstName) {
+				this.city = customer.city;
+				this.state = customer.state;
+				this.photo = customer.imageUrl;
+			}
+		})
 		this.customersService.getCustomerOrders().subscribe(orderTotal => {
 			orderTotal.forEach( order => {
 			 	if( name === order.customerName) {
 					this.currentCustomerOrders = order.orders;
 					this.orderTotal = order.orderTotal;
 					this.customerName = order.customerName;
+					this.lastName = order.lastName;
 			 		return true;
 			 	}	
 			 });		

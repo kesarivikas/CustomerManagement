@@ -3,10 +3,12 @@
 	<input type="text" #orderSearch placeholder="First Name">
 </div>
 
-<div *ngFor='let order of orderList'>
+<div *ngFor='let order of orderList' class="cms-container">
 		<p-table [value]="order.orders" class="ptable table-striped" [responsive]='true'>
-				<ng-template pTemplate="caption" styleClass='ui-table-caption123'>
-					{{order.customerName}} {{order.lastName}}
+				<ng-template pTemplate="caption" class="customCaption">
+					<div class="table-caption">
+						{{order.customerName}} {{order.lastName}}
+					</div>	
 				</ng-template>
 				<ng-template pTemplate="header">
 						<tr class="table-heading bg-primary">
@@ -25,6 +27,10 @@
 						<td>{{order.unitePrice}}</td>
 						<td>{{order.total}}</td>
 					</tr>
+				</ng-template>
+
+				<ng-template pTemplate="summary" class="custom-summary">
+						<p class="order-total">{{order.orderTotal}}</p>
 				</ng-template>
 		</p-table>
 </div>

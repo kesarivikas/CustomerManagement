@@ -1,6 +1,6 @@
-.abc.ui-table {
+/* .abc.ui-table {
 	margin-top: 30px;
-}
+} */
 
 
 .table-heading th {
@@ -16,10 +16,48 @@ tr.table-data {
 	color: black;
 }
 
-.table-heading {
+/* .table-heading {
 	margin-top: 30px;
+} */
+
+/* .ui-table-caption123{
+	background-color: transparent;
 }
 
-.ui-table-caption123{
-	background-color: transparent;
+.ptable .ui-table-caption.ui-widget-header {
+	float: left;
+	background-color: transparent !important;
+} */
+
+/* div.ui-table-caption.ui-widget-header {
+	background-color: #007bff;
+	float: left;
+} */
+
+.table-caption {
+	float: left;
+	color: #007bff;
+	font-weight: 400;
+}
+
+/* .ui-widget-header {
+	background-color: transparent !important;
+	border: none;
+} */
+
+.order-total {
+	padding-left: 457px;
+	font-weight: bold;
+	color: black;
+}
+
+.cms-container {
+	padding-top: 20px;
+}
+
+
+.ptable .ui-widget-header {
+	border: none;
+  background-color:transparent;
+  color:black;
 }

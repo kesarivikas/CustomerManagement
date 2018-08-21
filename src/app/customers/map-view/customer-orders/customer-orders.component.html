@@ -1,7 +1,7 @@
 <div class="order">
 	Order For {{custName}}
 </div>
-<p-table [value]="customerOrders" *ngIf='customerOrders else noOrderFound' class="table-striped">
+<p-table [value]="customerOrders" *ngIf='customerOrders else noOrderFound' class="ptable customer-order table-striped" width="300px">
 	<ng-template pTemplate="body" let-order>
 			<tr class="table-data">
 				<td>{{order.productName}}</td>

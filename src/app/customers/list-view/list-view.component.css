@@ -19,6 +19,10 @@ tr.table-data {
 	color: black;
 }
 
+tr.table-data > td{
+	border: none;
+}
+
 .ui-table-tbody  tr {
 	background-color: transparent;
 }

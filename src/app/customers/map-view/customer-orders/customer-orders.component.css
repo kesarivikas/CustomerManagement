@@ -17,3 +17,14 @@ tr.table-data {
   background-color:transparent;
   color:black;
 }
+
+.order-total {
+	/* padding-right: 203px; */
+	padding-left: 65px;
+	font-weight: bold;
+	color: black;
+	border-top: 2px solid black;
+}
+/* .ptable .ui-widget {
+	width: 500px;
+} */

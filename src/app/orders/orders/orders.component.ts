@@ -21,6 +21,7 @@ export class OrdersComponent implements OnInit {
 		this.debounceMethod();
 		this.customersService.getCustomerOrders().subscribe( orders => {
 			this.orderList = orders;
+			console.log("order list.....", this.orderList);
 			this.searchList = orders;
 		});
 	}

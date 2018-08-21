@@ -17,3 +17,52 @@
 	height: 50px;
   width: 80px;
 }
+
+
+tr.table-data {
+	background-color: transparent;
+	border: none;
+	color: black;
+}
+
+.table-data td {
+	border: none;
+}
+
+.ui-widget-header {
+	border: none;
+  background-color:transparent;
+  color:black;
+}
+
+tr.table-data > td{
+	border: none;
+}
+
+
+.customDialog .ui-widget-content {	
+	background-color: #ffffff;
+	color: black;
+}
+
+.customDialog .ui-widget-header{
+	background-color: #007bff;
+}
+
+.ui-table-thead .ng-star-inserted > th {
+	background-color: #007bff;
+}
+
+tr.table-data {
+	background-color: #ffffff;
+}
+
+.ptable .ui-widget-header {
+	border: none;
+  background-color:transparent;
+  color:black;
+}
+
+.ptable .ui-widget {
+	width: 650px;
+}

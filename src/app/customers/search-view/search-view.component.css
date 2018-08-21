@@ -15,11 +15,10 @@ tr.table-data {
 	background-color: transparent;
 }
 
-
 .customer-name {
 	position: absolute;
 	z-index: 1;
-	width: 222px;
+	width: 175px;
 	max-height: 300px;
 	background: #ffffff;
 	overflow-y: auto;
@@ -30,6 +29,19 @@ tr.table-data {
 	color: #007bff;
 }
 
+.search-suggestion {
+	float: left;
+  margin-right: 15px;
+}
+
 .suggestions:hover {
 	background: #ffffff;
+}
+
+tr.table-data > td{
+	border: none;
+}
+
+.ng-valid:not(form) {
+	border-left: none;
 }
