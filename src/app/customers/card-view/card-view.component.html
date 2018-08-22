@@ -42,7 +42,7 @@
 				{{city}} {{state}}
 			</div>
 		<div class="popup-table">
-			<p-table [value]="currentCustomerOrders" [responsive]="true" class='ptable table-striped'>
+			<p-table [value]="currentCustomerOrders" [responsive]="true" class='ptable order-pop table-striped'>
 				<!-- <ng-template pTemplate="caption">
 					<img src="assets/images/male.jpeg" class="popup-photo">
 					<div class="col-md-5 col-xs-3">
@@ -78,5 +78,6 @@
 <!-- <ul>
 	<div *ngFor="let item of customerCard | paginate: { itemsPerPage: 5, currentPage: p }">asdf </div>
 </ul> -->
-					 
-<pagination-controls (pageChange)="p = $event"></pagination-controls>
+<!-- <div class="footer"> -->
+	<pagination-controls (pageChange)="p = $event"></pagination-controls>
+<!-- </div> -->

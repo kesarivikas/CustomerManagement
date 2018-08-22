@@ -4,7 +4,9 @@
 		<ng-template pTemplate="header">
 			<tr class='table-heading'>
 				<th></th>
-				<th>First Name</th>
+				<th [pSortableColumn]="firstName">
+					<p-sortIcon [field]="firstName"></p-sortIcon>
+					First Name</th>
 				<th>Last Name</th>
 				<th>Address</th>
 				<th>City</th>

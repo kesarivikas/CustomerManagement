@@ -46,18 +46,22 @@ tr.table-data {
 } */
 
 .order-total {
-	padding-left: 457px;
 	font-weight: bold;
 	color: black;
+	float: right;
+  padding-right: 200PX;
 }
 
 .cms-container {
 	padding-top: 20px;
 }
 
-
 .ptable .ui-widget-header {
 	border: none;
   background-color:transparent;
   color:black;
+}
+
+.link-color li > a.nav-link {
+	color: black;
 }

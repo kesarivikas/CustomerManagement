@@ -18,7 +18,6 @@
   width: 80px;
 }
 
-
 tr.table-data {
 	background-color: transparent;
 	border: none;
@@ -38,7 +37,6 @@ tr.table-data {
 tr.table-data > td{
 	border: none;
 }
-
 
 .customDialog .ui-widget-content {	
 	background-color: #ffffff;
@@ -64,5 +62,67 @@ tr.table-data {
 }
 
 .ptable .ui-widget {
-	width: 650px;
+	width: auto;
+}
+
+.ptable.order-pop .ui-widget {
+	width: 465px;
+}
+
+li {
+	border-radius: 6px;
+	display: block;
+	color: #000;
+	padding: 0px 10px;
+	text-decoration: none;
+}
+
+li.active {
+	background-color: #ffffff;
+	color: black ;
+	font-weight: bold;
+}
+
+.nav-link {
+	color: black;
+}
+
+li.active .nav-link {
+	color: black !important;
+}
+
+li.active-link {
+	font-weight: bold;
+}
+
+ul.nav.nav-pills {
+	padding-top: 20px;
+	padding-left: 10px;
+}
+
+li.nav-pills{
+	background-color: #F0F0F0;
+	margin-right: 20px;
+	padding-right: 50px
+}
+
+li.nav-pills.active {
+	background-color: #1E90FF;
+	color: black ;
+	font-weight: bold;
+	padding-right: 50px
+}
+
+.nav-link {
+	padding-right: .5rem !important;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	color: white;
+	text-align: center;
 }
