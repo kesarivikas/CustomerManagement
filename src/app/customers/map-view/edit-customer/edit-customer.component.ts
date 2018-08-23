@@ -71,6 +71,7 @@ export class EditCustomerComponent implements OnInit {
 				self.updatedCustomerList.push(customer);
 			});
 			self.customerService.setCustomersList(self.updatedCustomerList);
+			alert("Profile Updated Successfully");
 		});
 	}
 

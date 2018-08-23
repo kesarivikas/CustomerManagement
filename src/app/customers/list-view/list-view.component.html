@@ -1,17 +1,22 @@
 <!-- <p-table [value]="customers" *ngIf="customerList | async as customers"> -->
 <div class="cms-container">
-	<p-table [value]="customers" *ngIf="customerList as customers" [paginator]="true" [rows]="5" class="table table-striped" [responsive]='true'>
+	<p-table [value]="customers" [columns]="cols" *ngIf="customerList as customers" [paginator]="true" [rows]="5" class="table table-striped" [responsive]='true'>
 		<ng-template pTemplate="header">
 			<tr class='table-heading'>
 				<th></th>
-				<th [pSortableColumn]="firstName">
-					<p-sortIcon [field]="firstName"></p-sortIcon>
+				<th [pSortableColumn]="'firstName'">
+					<!-- <p-sortIcon [field]="'firstName'"> -->
+					<p-sortIcon [field]="'firstName'" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+				<!-- </p-sortIcon> -->
 					First Name</th>
 				<th>Last Name</th>
 				<th>Address</th>
 				<th>City</th>
 				<th>State</th>
-				<th>Order Total</th>
+				<th [pSortableColumn]="'orderTotal'">
+						<p-sortIcon [field]="'orderTotal'" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+					Order Total
+				</th>
 			</tr>
 		</ng-template>
 		<ng-template pTemplate="body" let-list>

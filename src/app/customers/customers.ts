@@ -11,4 +11,6 @@ export interface Customers {
 	orders: string;
 	orderTotal: string;
 	imageUrl: string;
+	lat: number;
+	log: number;
 }

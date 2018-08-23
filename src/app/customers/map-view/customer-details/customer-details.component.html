@@ -1,3 +1,18 @@
-<p>
-  customer-details works!
-</p>
+<div class="cms-container">
+	<h3>Customer Information</h3>
+	<div class="row">
+		<div class="col-md-2">
+			<img src="{{currentCustomer.imageUrl}}" class="photo">
+			<!-- <img src="{{customer.imageUrl}}" class="photo"> -->
+		</div>
+		<div>
+			<p>{{currentCustomer.firstName}} {{currentCustomer.lastName}}</p>
+			<p>{{currentCustomer.address}}<br/>
+			{{currentCustomer.city}} {{currentCustomer.state}}</p>
+		</div>
+	</div>
+
+	<agm-map [latitude]="currentCustomer.lat" [longitude]="currentCustomer.log">
+		<agm-marker [latitude]="currentCustomer.lat" [longitude]="currentCustomer.log"></agm-marker>
+	</agm-map>
+</div>	

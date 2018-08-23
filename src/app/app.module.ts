@@ -37,6 +37,7 @@ import { NavService } from './nav/nav.service';
 import { OrdersComponent } from './orders/orders/orders.component';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
 		DialogModule,
 		BrowserAnimationsModule,
 		AutoCompleteModule,
-		NgxPaginationModule
+		NgxPaginationModule,
+		AgmCoreModule.forRoot({
+      apiKey: ''
+    })
   ],
   providers: [LoginService, CustomersService, NavService, AuthGuard],
   bootstrap: [AppComponent]

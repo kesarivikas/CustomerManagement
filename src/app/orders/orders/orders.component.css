@@ -65,3 +65,12 @@ tr.table-data {
 .link-color li > a.nav-link {
 	color: black;
 }
+
+.folder {
+	height: 20px;
+	padding-left: 15px;
+}
+
+h3 {
+	padding-bottom: 15px;
+}

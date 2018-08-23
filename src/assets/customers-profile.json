@@ -11,7 +11,9 @@
 		"zip": "400123",
 		"orders": "2",
 		"orderTotal": "$49.00",
-		"imageUrl": "assets/images/male.jpeg"
+		"imageUrl": "assets/images/male.jpeg",
+		"lat": 43.139229,
+		"log": -79.484901
 	},
 	{
 		"customerID": "2",
@@ -25,7 +27,9 @@
 		"zip": "41233",
 		"orders": "2",
 		"orderTotal": "$49.00",
-		"imageUrl": "assets/images/female.jpeg"
+		"imageUrl": "assets/images/female.jpeg",
+		"lat": 19.1622,
+		"log": 73.0007
 	},
 	{
 		"customerID": "3",
@@ -39,7 +43,9 @@
 		"zip": "400064",
 		"orders": "2",
 		"orderTotal": "$49.00",
-		"imageUrl": "assets/images/female.jpeg"
+		"imageUrl": "assets/images/female.jpeg",
+		"lat": 19.9975,
+		"log": 73.7898
 	},
 	{
 		"customerID": "4",
@@ -53,7 +59,9 @@
 		"zip": "400064",
 		"orders": "2",
 		"orderTotal": "$49.00",
-		"imageUrl": "assets/images/male.jpeg"
+		"imageUrl": "assets/images/male.jpeg",
+		"lat": 19.1551,
+		"log": 72.8679
 	},
 	{
 		"customerID": "5",
@@ -67,7 +75,9 @@
 		"zip": "400064",
 		"orders": "2",
 		"orderTotal": "$47.00",
-		"imageUrl": "assets/images/female.jpeg"
+		"imageUrl": "assets/images/female.jpeg",
+		"lat": 19.1405,
+		"log": 72.8422
 	},
 	{
 		"customerID": "6",
@@ -81,7 +91,9 @@
 		"zip": "400064",
 		"orders": "2",
 		"orderTotal": "$47.00",
-		"imageUrl": "assets/images/female.jpeg"
+		"imageUrl": "assets/images/female.jpeg",
+		"lat": 19.1998,
+		"log": 72.8426
 	},
 	{
 		"customerID": "7",
@@ -95,7 +107,9 @@
 		"zip": "400064",
 		"orders": "2",
 		"orderTotal": "$47.00",
-		"imageUrl": "assets/images/female.jpeg"
+		"imageUrl": "assets/images/female.jpeg",
+		"lat": 19.1136,
+		"log": 72.8697
 	},
 	{
 		"customerID": "8",
@@ -109,7 +123,9 @@
 		"zip": "400064",
 		"orders": "2",
 		"orderTotal": "$47.00",
-		"imageUrl": "assets/images/female.jpeg"
+		"imageUrl": "assets/images/female.jpeg",
+		"lat": 19.1136,
+		"log": 72.8697
 	},
 	{
 		"customerID": "9",
@@ -123,7 +139,9 @@
 		"zip": "400064",
 		"orders": "2",
 		"orderTotal": "$47.00",
-		"imageUrl": "assets/images/female.jpeg"
+		"imageUrl": "assets/images/female.jpeg",
+		"lat": 19.1136,
+		"log": 72.8697
 	},
 	{
 		"customerID": "10",
@@ -137,7 +155,9 @@
 		"zip": "400064",
 		"orders": "2",
 		"orderTotal": "$47.00",
-		"imageUrl": "assets/images/male.jpeg"
+		"imageUrl": "assets/images/male.jpeg",
+		"lat": 19.1136,
+		"log": 72.8697
 	},
 	{
 		"customerID": "11",
@@ -151,7 +171,9 @@
 		"zip": "400064",
 		"orders": "2",
 		"orderTotal": "$47.00",
-		"imageUrl": "assets/images/male.jpeg"
+		"imageUrl": "assets/images/male.jpeg",
+		"lat": 19.1136,
+		"log": 72.8697
 	},
 	{
 		"customerID": "12",
@@ -165,6 +187,8 @@
 		"zip": "400064",
 		"orders": "3",
 		"orderTotal": "$47.00",
-		"imageUrl": "assets/images/male.jpeg"
+		"imageUrl": "assets/images/male.jpeg",
+		"lat": 25.0961,
+		"log": 85.3131
 	}
 ]

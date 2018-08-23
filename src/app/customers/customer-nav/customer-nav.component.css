@@ -1,0 +1,24 @@
+
+.customer-logo {
+	height: 30px;
+	width: 30px;
+	margin-right: 10px;
+}
+
+.cust-logo {
+	padding-left: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.icon {
+	height: 12px;
+}
+
+li {
+	padding: 0px 0px;
+}
+
+ul {
+	padding-bottom: 12px;
+}

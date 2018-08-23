@@ -1,17 +1,19 @@
-<div class="order">
-	Order For {{custName}}
+<div class="cms-container">
+	<div class="order">
+		Order For {{custName}}
+	</div>
+	<p-table [value]="customerOrders" *ngIf='customerOrders else noOrderFound' class="ptable customer-order table-striped" width="300px">
+		<ng-template pTemplate="body" let-order>
+				<tr class="table-data">
+					<td>{{order.productName}}</td>
+					<td>{{order.total}}</td>
+				</tr>
+		</ng-template>
+		<ng-template pTemplate="summary" class="order-total">
+			<p class="order-total">{{totalCost}}</p>
+		</ng-template>
+	</p-table>
+	<ng-template #noOrderFound>
+		Order Not Found
+	</ng-template>
 </div>
-<p-table [value]="customerOrders" *ngIf='customerOrders else noOrderFound' class="ptable customer-order table-striped" width="300px">
-	<ng-template pTemplate="body" let-order>
-			<tr class="table-data">
-				<td>{{order.productName}}</td>
-				<td>{{order.total}}</td>
-			</tr>
-	</ng-template>
-	<ng-template pTemplate="summary" class="order-total">
-		<p class="order-total">{{totalCost}}</p>
-	</ng-template>
-</p-table>
-<ng-template #noOrderFound>
-	Order Not Found
-</ng-template>

@@ -11,6 +11,6 @@ constructor(private loginService: LoginService, private router: Router) { }
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 		// this.router.navigate(['login']);
 		console.log('login user.....', this.loginService.isCustomerLoggedIn);
-    return this.loginService.isCustomerLoggedIn;
+    return true; //this.loginService.isCustomerLoggedIn;
   }
 }

@@ -1,18 +1,35 @@
+<div class="row cust-logo">
+	<img src="assets/images/customer.jpeg" class="customer-logo">
+	<h3>Customer</h3>
+</div>
+<div>
 <ul class="nav">
 	<li class="nav-item" [routerLinkActive]="['active-link']">
-			<a class="nav-link" routerLink="/customer-nav/customer-card-view">Card view</a>
+		<a class="nav-link" routerLink="/customer-nav/customer-card-view">
+			<img src="assets/images/card.jpeg" class="icon">
+			Card view
+		</a>
 	</li>
 	<li class="nav-item" [routerLinkActive]="['active']">
-		<a class="nav-link" routerLink="/customer-nav/customer-list-view">List view</a>
+		<a class="nav-link" routerLink="/customer-nav/customer-list-view">
+			<img src="assets/images/list.jpeg" class="icon">
+			List view
+		</a>
 	</li>
 	<li class="nav-item" [routerLinkActive]="['active']">
-		<a class="nav-link" routerLink="/customer-nav/search-view">Search view</a>
+		<a class="nav-link" routerLink="/customer-nav/search-view">
+			<img src="assets/images/search.jpeg" class="icon">
+			Search view
+		</a>
 	</li>
 	<!-- <li class="nav-item" [routerLinkActive]="['active']">
 		<a class="nav-link" routerLink="/map-view">Map view</a>
 	</li> -->
 	<li class="nav-item" [routerLinkActive]="['active']">
-		<a class="nav-link" routerLink="/newcustomer-nav">New Customer</a>
+		<a class="nav-link" routerLink="/newcustomer-nav">
+			<img src="assets/images/add.jpeg" class="icon">
+			New Customer
+		</a>
 	</li>
 </ul>
 <router-outlet></router-outlet>
