@@ -1,12 +1,25 @@
+<div class="row cust-logo">
+	<img src="assets/images/customer.jpeg" class="customer-logo"> 
+	<h2>Customers Information</h2>
+</div>
 <ul class="nav">
   <li class="nav-item" [routerLinkActive]="['active']">
-		<a class="nav-link" [routerLink]="['/map-view/customer-details']" [queryParams]="{firstName: firstName}">Customers Details</a>
+		<a class="nav-link" [routerLink]="['/map-view/customer-details']" [queryParams]="{firstName: firstName}">
+			<img src="assets/images/list.jpeg" class="icon">
+			Customer Details
+		</a>
 	</li>
   <li class="nav-item" [routerLinkActive]="['active']">
-		<a class="nav-link" [routerLink]="['/map-view/customer-orders']" [queryParams]="{firstName: firstName}">Customers Orders</a>
+		<a class="nav-link" [routerLink]="['/map-view/customer-orders']" [queryParams]="{firstName: firstName}">
+			<img src="assets/images/order.jpeg" class="icon">
+			Customers Orders
+		</a>
 	</li>
   <li class="nav-item" [routerLinkActive]="['active']">
-		<a class="nav-link" [routerLink]="['/map-view/edit-customers']" [queryParams]="{firstName: firstName}">Edit Customers</a>
+		<a class="nav-link" [routerLink]="['/map-view/edit-customers']" [queryParams]="{firstName: firstName}">
+			<img src="assets/images/edit.jpeg" class="icon">
+			Edit Customer
+		</a>
 	</li>
 </ul>
 <router-outlet></router-outlet>

@@ -1,11 +1,11 @@
 import { TestBed, inject } from '@angular/core/testing';
-
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { LoginService } from './login.service';
 
-describe('LoginService', () => {
+fdescribe('LoginService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [LoginService]
+      providers: [LoginService, HttpClient, HttpHandler]
     });
   });
 

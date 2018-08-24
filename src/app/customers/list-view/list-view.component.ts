@@ -11,6 +11,7 @@ import { Observable } from 'rxjs/Observable';
 export class ListViewComponent implements OnInit {
 	//public customerList: Observable<Customers[]>;
 	public customerList: Customers[];
+	public p: number = 1;
 	constructor(private customersService: CustomersService) { }
 	ngOnInit() {
 		if(this.customersService.getCustomersList()){

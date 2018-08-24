@@ -25,8 +25,9 @@ export class CardViewComponent implements OnInit {
 	public lastName: string;
 	public photo: string;
 	public p: number = 1;
+	public seachFlag: boolean = false;
    // collection: any[] = someArrayOfThings;  
-
+	userFilter: any = { firstName: ''};
   constructor(private customersService: CustomersService) { }
 
   ngOnInit() {
@@ -70,11 +71,13 @@ export class CardViewComponent implements OnInit {
 	}
 
 	debounceMethod() {
+	let self = this;
 	Observable.fromEvent(this.firstName.nativeElement, 'keyup')
 		.map((evt: any) => evt.target.value)
 		.debounceTime(1000)           
 		.distinctUntilChanged()
 		.subscribe((searchText: string) => this.searchSuggestion(searchText));
+		this.seachFlag = true;
 	 }
 
 	searchSuggestion(searchText) {
