@@ -17,7 +17,7 @@ export class CustomerDetailsComponent implements OnInit {
   // lng: number = 7.809007;
   ngOnInit() {
 		this.firstName = this.activatedRoutes.snapshot.queryParamMap.get('firstName');
-		this.customerService.setCustomerId(this.firstName);
+		// this.customerService.setCustomer(this.firstName);
 		this.customerService.getCustomersList().forEach(customer => {
 			if (customer.firstName === this.firstName) {
 				console.log('Integrating google map.......', this.firstName);

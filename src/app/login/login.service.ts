@@ -1,6 +1,6 @@
-import { Injectable, EventEmitter, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Login } from './login';
 
 @Injectable()
 export class LoginService {
@@ -9,14 +9,7 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-	// @Output()
-	// loginFlag: EventEmitter<boolean> = new EventEmitter();
-
-	// isLoggedIn(login) {
-	// 	console.log('login service called');
-	// 	this.loginFlag.emit(login);
-	// }
 	getLoginCredential() {
-		return this.http.get(this.loginUrl);
+		return this.http.get<Login[]>(this.loginUrl);
 	}
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 import { LoginService } from '../login/login.service';
 import { Login } from '../login/login';
 import { NavService } from '../nav/nav.service';
@@ -32,10 +33,10 @@ export class LoginComponent implements OnInit {
 					self.isLoggedInUser = true;
 					self.router.navigate(['about']);
 	 			}
-			 })
-			 if(!self.isLoggedInUser) {
-				 alert('Invalid username and password');
-			 }
+			});
+			if(!self.isLoggedInUser) {
+				alert('Invalid username and password');
+			}
 	 	});
 	}
 }
