@@ -67,22 +67,23 @@
 					</span>
 				</div>
 		</div>
-		<div class="form-group row">
-			<div class="col-md-4">
-				<button type="button"
-								class="btn btn-primary"
-								(click)='cancel()'>cancel</button>
-			</div>
-			<div class="">
-				<button type="button"
-								class="btn btn-primary"
-								(click)='previous()'>previous</button>
-			</div>
-			<div class="col-md-4">
+</form>
+
+<div class="clearfix multi-step-footer">
+		<div class="float-left">
+			<button type="button"
+							class="btn btn-primary"
+							(click)='cancel()'>cancel</button>
+		</div>
+		<div class="float-right">
 				<button type="button"
 								class="btn btn-primary"
 								(click)='updateCustomerProfile()'
 								[disabled]='!profile.valid'>Next</button>
 			</div>
+		<div class="float-right previous">
+			<button type="button"
+							class="btn btn-primary"
+							(click)='previous()'>previous</button>
 		</div>
-</form>
+</div>

@@ -27,3 +27,6 @@ tr.table-data > td{
 	background-color: transparent;
 }
 
+.ui-widget-header { 
+	background-color: transparent;
+}

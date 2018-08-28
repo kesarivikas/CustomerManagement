@@ -3,9 +3,24 @@
   width: 100px;
 }
 
-.customer-name {
+.grid-header {
 	background-color: #007bff
 }
+
+.customer-name {
+	position: absolute;
+	z-index: 1;
+	width: 175px;
+	max-height: 300px;
+	background: #ffffff;
+	overflow-y: auto;
+}
+
+.suggestions {
+	padding: 10px;
+	color: #007bff;
+}
+
 @media (min-width: 1200px){
 .container {
     max-width: 1004px;

@@ -3,15 +3,15 @@
 	<input type="text" #firstName placeholder="First Name" class="col-xs-4 col-md-2">
 </div>
 
-<!-- <div class="customer-name">
-	<div *ngFor="let customer of customerCard | filterBy: userFilter" class="suggestions">{{customer.firstName}} {{customer.lastName}}</div>
-</div> -->
+<div class="customer-name" *ngIf="searchResult?.length > 0">
+	<div *ngFor="let customer of searchResult | filterBy: userFilter" class="suggestions">{{customer.firstName}} {{customer.lastName}}</div>
+</div>
 
 <div *ngIf="customerCard?.length else noUserFound">
 	<div class="row">
 		<div class="col-md-3 col-xs-3" *ngFor="let customer of customerCard | paginate: { itemsPerPage: 8, currentPage: p }">
 			<!-- <div *ngFor="let item of customerCard | paginate: { itemsPerPage: 8, currentPage: p }"> -->
-			<div class="customer-name border">{{customer.firstName}} {{customer.lastName}}
+			<div class="grid-header border">{{customer.firstName}} {{customer.lastName}}
 				<img src="assets/images/edit.jpeg" class="edit-logo">
 			</div>
 			<div class="row border">

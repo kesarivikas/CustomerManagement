@@ -45,3 +45,16 @@ tr.table-data > td{
 .ng-valid:not(form) {
 	border-left: none;
 }
+
+.search-container {
+	width: 100%;
+}
+
+.col-form-label {
+	float: left;
+}
+
+.input-box {
+	float: left;
+	margin-left: 10px;
+}

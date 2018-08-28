@@ -126,3 +126,58 @@ li.nav-pills.active {
 	color: white;
 	text-align: center;
 }
+
+.row {
+	margin-right: 0px;
+}
+
+.multi-step-footer {
+	position: fixed;
+	bottom: 0;
+	padding: 0 15px 10px;
+	background: #fff;
+	width: 100%;
+}
+
+.previous {
+	padding-right: 10px;
+}
+
+/* .ui-paginator-pages .ui-state-active {
+	border-color: #fff;
+	background-color: #007bff;
+} */
+
+.ui-paginator-bottom.ui-widget-header {
+	background-color: transparent;
+	float: left;
+	border: none;
+}
+
+	/* .ui-paginator-bottom .ui-paginator a {
+		color: #007bff;
+	} */
+
+.ui-paginator-pages .ui-state-default {
+	background-color: transparent;
+	color: black;
+}
+
+.ui-paginator-page.ui-corner-all {
+	border-radius: 0px;
+}
+
+.ui-paginator-pages .ui-state-active {
+	border-color: #fff;
+	background-color: #007bff;
+}
+
+.ui-paginator-bottom .ui-paginator-page .ui-paginator a{
+	color: #007bff;
+}
+/* .ui-paginator-prev.ui-state-default {
+	background-color: transparent;
+} */
+.ui-paginator-bottom .ui-paginator-element.ui-corner-all{
+	border-radius: 0px;
+}

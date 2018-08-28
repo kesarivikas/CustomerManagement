@@ -1,11 +1,16 @@
 <div class="cms-container ">
-	<div class="search-suggestion">
+	<div class="search-container">
 		<label for="fname" class="col-form-label">Filter:</label>
-		<input type="text" [(ngModel)]="userFilter.firstName" placeholder="First Name">
-		<div class="customer-name" *ngIf="userFilter.firstName" >
-			<div *ngFor="let customer of customers | filterBy: userFilter" class="suggestions">{{customer.firstName}} {{customer.lastName}}</div>
-		</div>
-		<!-- </div> -->
+			<div class="input-box">
+				<input type="text" [(ngModel)]="userFilter.firstName" placeholder="First Name">
+				<div class="customer-name" *ngIf="userFilter.firstName" >
+					<div *ngFor="let customer of customers | filterBy: userFilter" class="suggestions">{{customer.firstName}} {{customer.lastName}}</div>
+				</div>
+			</div>			
+	</div>	
+
+	<div class="search-suggestion">
+	<!-- </div> -->
 		<p-table [value]="customers | filterBy: userFilter" 
 						*ngIf="(customers | filterBy: userFilter)?.length else noUserFound"
 						[responsive]='true'
