@@ -178,6 +178,10 @@ li.nav-pills.active {
 /* .ui-paginator-prev.ui-state-default {
 	background-color: transparent;
 } */
-.ui-paginator-bottom .ui-paginator-element.ui-corner-all{
+.ui-paginator-bottom .ui-paginator-element.ui-corner-all {
 	border-radius: 0px;
+}
+
+.ui-autocomplete .ui-widget-content{
+	background-color: #fff
 }

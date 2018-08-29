@@ -140,3 +140,7 @@ tr.table-data {
 .ptable .ui-widget {
 	width: 500;
 }
+
+.ng-valid:not(form) {
+	border-left: none;
+}

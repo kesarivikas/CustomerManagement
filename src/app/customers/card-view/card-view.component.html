@@ -1,11 +1,12 @@
 <div class="row">
 	<label for="fname" class="col-sm-2 col-form-label">Filter: </label>
-	<input type="text" #firstName placeholder="First Name" class="col-xs-4 col-md-2">
+	<!-- <input type="text" #firstName placeholder="First Name" class="col-xs-4 col-md-2"> -->
+	<p-autoComplete [(ngModel)]="firstName" #name [suggestions]="searchResult" (completeMethod)="search($event)" field="firstName" placeholder="Countries" (keyup)="onChange(firstName)"></p-autoComplete>
 </div>
 
-<div class="customer-name" *ngIf="searchResult?.length > 0">
+<!-- <div class="customer-name" *ngIf="searchResult?.length > 0">
 	<div *ngFor="let customer of searchResult | filterBy: userFilter" class="suggestions">{{customer.firstName}} {{customer.lastName}}</div>
-</div>
+</div> -->
 
 <div *ngIf="customerCard?.length else noUserFound">
 	<div class="row">

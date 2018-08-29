@@ -3,7 +3,7 @@ export class OrderTotal {
 	"customerName": string;
 	"lastName": string;
 	"orders": Order[];
-	"orderTotal": "$47.00"
+	"orderTotal": string
 }
 
 export class Order {

@@ -39,6 +39,7 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { AgmCoreModule } from '@agm/core';
 
+
 @NgModule({
   declarations: [
     AppComponent,

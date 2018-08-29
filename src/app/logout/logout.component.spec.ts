@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LogoutComponent } from './logout.component';
+import { LoginService } from '../login/login.service';
+import { NavService } from '../nav/nav.service';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('LogoutComponent', () => {
   let component: LogoutComponent;
@@ -8,7 +12,9 @@ describe('LogoutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LogoutComponent ]
+			imports: [HttpClientModule, RouterTestingModule.withRoutes([])],
+			declarations: [ LogoutComponent ],
+			providers:[NavService, LoginService]
     })
     .compileComponents();
   }));

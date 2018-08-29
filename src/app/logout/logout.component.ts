@@ -10,7 +10,7 @@ import { NavService } from '../nav/nav.service';
   styleUrls: ['./logout.component.css']
 })
 export class LogoutComponent implements OnInit {
-  constructor(private loginService: LoginService, private router: Router, private navService: NavService) { 
+  constructor(private loginService: LoginService, private router: Router, private navService: NavService) {
 		this.navService.hide();
 	}
 

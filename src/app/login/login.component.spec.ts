@@ -1,65 +1,50 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-//import {Component, DebugElement, NO_ERRORS_SCHEMA} from "@angular/core";
+import {Component, DebugElement, NO_ERRORS_SCHEMA} from "@angular/core";
 import { LoginComponent } from './login.component';
 import { Login } from './login';
 import { LoginService } from './login.service';
-import {Routes, RouterModule} from '@angular/router';
-//import {By} from "@angular/platform-browser";
-//import { FormGroup, FormBuilder } from '@angular/forms';
+import {By} from "@angular/platform-browser";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-//import { HttpClient, HttpHandler } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
+import { NavService } from '../nav/nav.service';
 
-fdescribe('Component: LoginComponent', () => {
+describe('Component: LoginComponent', () => {
   let loginComponent: LoginComponent;
 	let fixture: ComponentFixture<LoginComponent>;
-	// let submit: DebugElement;
-  // let email: DebugElement;
-  // let password: DebugElement;
+	let loginService: LoginService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-			imports: [ReactiveFormsModule, FormsModule, HttpClientModule, Router, RouterTestingModule.withRoutes([])],
+			imports: [ReactiveFormsModule, FormsModule, HttpClientModule, RouterTestingModule.withRoutes([])],
 			declarations: [ LoginComponent ],
-			providers:[LoginService, HttpClientModule]
+			providers:[LoginService, NavService, HttpClientModule]
     });
 		fixture = TestBed.createComponent(LoginComponent);
 		loginComponent = fixture.componentInstance;
+		loginService = TestBed.get(LoginService);
 		loginComponent.ngOnInit();
   });
 
-	const mockRouter = {
-		navigate: jasmine.createSpy('navigate')
-	};
-  // beforeEach(() => {
-	
-		// submit = fixture.debugElement.query(By.css('button'));
-    // email = fixture.debugElement.query(By.css('input[type=email]'));
-    // password = fixture.debugElement.query(By.css('input[type=password]'));
-  //   fixture.detectChanges();
-	// });
+   beforeEach(() => {
+     fixture.detectChanges();
+	 });
 
-	it('Should load the login component', () => {
-		//expect(component.form.valid).toBeFalsy();
-		expect(loginComponent.loginForm.valid).toBeFalsy();
-		console.log("login component is called....");
-	});
-	
-	// it('Entering email and password', () => {
-	// 	let user: Login;
-  //   // email.nativeElement.value = "test@example.com";
-	// 	// password.nativeElement.value = "123456";
-	// 	// submit.triggerEventHandler('click', null); 
+		it('should create', () => {
+			expect(loginComponent).toBeTruthy();
+		}); 
 
-	// 	expect(user.username).toBe("adminadmin");
-	// 	expect(user.password).toBe("adminadmin");
+	 it('Should load the login component', () => {
+	 	expect(loginComponent.loginForm.valid).toBeFalsy();
+	 });
 
-  //   fixture.detectChanges();
-  // });
+		it('Should test the auth customer', () => {
+			spyOn(loginService, 'isCustomerLoggedIn').and.returnValue(true);
+		});
 
-  //  it('should create', () => {
-  //    expect(component).toBeTruthy();
-  //  });
+		it('Should called login method', () => {
+			loginComponent.loginForm.controls['username'].setValue("adminadmin");
+			loginComponent.loginForm.controls['password'].setValue("adminadmin");
+			loginComponent.login();
+		}); 
 });

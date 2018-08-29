@@ -11,7 +11,7 @@ import { Order } from '../../orders/order-total';
 })
 export class CardViewComponent implements OnInit {
 
-	@ViewChild('firstName') firstName: ElementRef;
+	// @ViewChild('firstName') firstName: ElementRef;
   //search: string;
 	//public customerCard: Observable<Customers[]>;
 	public customerCard: Customers[];
@@ -46,13 +46,14 @@ export class CardViewComponent implements OnInit {
 	popupModel(name) {
 		this.display = true;
 		console.log("customer details list. for popup...",this.customersService.getCustomersList());
-		this.customersService.getCustomersList().forEach(customer =>{
+		this.customersService.getCustomersList().forEach(customer => {
 			if (name === customer.firstName) {
 				this.city = customer.city;
 				this.state = customer.state;
 				this.photo = customer.imageUrl;
 			}
 		})
+
 		this.customersService.getCustomerOrders().subscribe(orderTotal => {
 			orderTotal.forEach( order => {
 			 	if( name === order.customerName) {
@@ -66,25 +67,43 @@ export class CardViewComponent implements OnInit {
 		});
 	}
 
-	closePopUp(){
+	closePopUp() {
 		this.display = false;
 	}
 
 	debounceMethod() {
-	let self = this;
-	Observable.fromEvent(this.firstName.nativeElement, 'keyup')
-		.map((evt: any) => evt.target.value)
-		.debounceTime(1000)           
-		.distinctUntilChanged()
-		.subscribe((searchText: string) => this.searchSuggestion(searchText));
-		this.seachFlag = true;
+	// let self = this;
+	// Observable.fromEvent(this.firstName.nativeElement, 'keyup')
+	// 	.map((evt: any) => evt.target.value)
+	// 	.debounceTime(1000)           
+	// 	.distinctUntilChanged()
+	// 	.subscribe((searchText: string) => this.searchSuggestion(searchText));
+	// 	this.seachFlag = true;
 	 }
 
 	searchSuggestion(searchText) {
+		// this.searchResult = [];
+		// if( searchText.length > 0) {
+		// 	this.customersService.getCustomersList().forEach(data => {
+		// 		if( data.firstName.toLowerCase().includes(searchText.toLowerCase())) {
+		// 			this.searchResult.push(data);
+		// 		}
+		// 	});
+			//if( this.searchResult.length > 0) {
+				this.customerCard = this.searchResult;
+			// } else {
+			// 	this.customerCard = this.customersService.getCustomersList();
+		//	} 
+		// } else {
+		// 	this.customerCard = this.customersService.getCustomersList();
+		// }
+	}
+
+	search(event) {
 		this.searchResult = [];
-		if( searchText.length > 0) {
+		if( event.query.length > 0) {
 			this.customersService.getCustomersList().forEach(data => {
-				if( data.firstName.toLowerCase().includes(searchText.toLowerCase())) {
+				if( data.firstName.toLowerCase().includes(event.query.toLowerCase())) {
 					this.searchResult.push(data);
 				}
 			});
@@ -94,6 +113,12 @@ export class CardViewComponent implements OnInit {
 			// 	this.customerCard = this.customersService.getCustomersList();
 		//	} 
 		} else {
+			this.customerCard = this.customersService.getCustomersList();
+		}
+	}
+
+	onChange(firstName){
+		if( firstName.length === 0) {
 			this.customerCard = this.customersService.getCustomersList();
 		}
 	}
