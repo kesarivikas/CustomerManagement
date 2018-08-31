@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MapNavComponent } from './map-nav.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
+
 
 describe('MapNavComponent', () => {
   let component: MapNavComponent;
@@ -8,7 +11,9 @@ describe('MapNavComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MapNavComponent ]
+			imports: [ RouterTestingModule, HttpClientModule],
+			declarations: [ MapNavComponent ],
+			providers:[]
     })
     .compileComponents();
   }));

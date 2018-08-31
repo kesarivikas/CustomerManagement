@@ -13,7 +13,8 @@
 		<div class="col-md-3 col-xs-3" *ngFor="let customer of customerCard | paginate: { itemsPerPage: 8, currentPage: p }">
 			<!-- <div *ngFor="let item of customerCard | paginate: { itemsPerPage: 8, currentPage: p }"> -->
 			<div class="grid-header border">{{customer.firstName}} {{customer.lastName}}
-				<img src="assets/images/edit.jpeg" class="edit-logo">
+					<a [routerLink]="['/map-view/customer-details']" [queryParams]="{firstName: customer.firstName}"><img src="assets/images/edit.jpeg" class="edit-logo"></a>
+				<!-- <img src="assets/images/edit.jpeg" class="edit-logo"> -->
 			</div>
 			<div class="row border">
 				<div class="col-md-5 col-xs-3">
