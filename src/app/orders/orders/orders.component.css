@@ -68,9 +68,37 @@ tr.table-data {
 
 .folder {
 	height: 20px;
-	padding-left: 15px;
+	/* padding-left: 15px; */
 }
 
 h3 {
 	padding-bottom: 15px;
 }
+
+@media screen and (max-width: 480px) {
+	.order-total {
+		padding-right: 289px !important;
+		float: none;
+	}
+	/* .folder{
+		padding-left: 0px;
+	} */
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+	.order-total {
+		padding-right: 65px;
+	}
+	/* .folder{
+		padding-left: 0px;
+	} */
+}
+
+/* @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+	.order-total {
+		padding-right: 65px;
+	}
+	 .folder{
+		padding-left: 0px;
+	} 
+} */

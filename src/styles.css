@@ -185,3 +185,15 @@ li.nav-pills.active {
 .ui-autocomplete .ui-widget-content{
 	background-color: #fff
 }
+
+ .loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: none;
+	cursor: none;
+	opacity: .7;
+	background: #000 no-repeat center;
+}

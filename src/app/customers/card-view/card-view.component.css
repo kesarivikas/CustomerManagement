@@ -1,6 +1,6 @@
 .photo {
 	height: 100px;
-  width: 100px;
+  max-width: 100px;
 }
 
 .grid-header {
@@ -143,4 +143,17 @@ tr.table-data {
 
 .ng-valid:not(form) {
 	border-left: none;
+}
+
+
+
+.loader1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #666666;
+	opacity: .50;
+	z-index: 1000;
 }
