@@ -26,20 +26,21 @@ export class CardViewComponent implements OnInit {
 	public photo: string;
 	public p: number = 1;
 	public seachFlag: boolean = false;
-   // collection: any[] = someArrayOfThings;  
+	 // collection: any[] = someArrayOfThings;
+	public firstName: string;
 	userFilter: any = { firstName: ''};
   constructor(private customersService: CustomersService) { }
 
   ngOnInit() {
 		this.debounceMethod();
 		//this.customerCard = this.customersService.getCustomers();
-		if(this.customersService.getCustomersList()) {
+		if (this.customersService.getCustomersList()) {
 			this.customerCard = this.customersService.getCustomersList();
 		} else {
 			this.customersService.getCustomers().subscribe(data => {
 				this.customerCard = data;
 				this.customersService.setCustomersList(data);
-			})
+			});
 		}
 	}
 
