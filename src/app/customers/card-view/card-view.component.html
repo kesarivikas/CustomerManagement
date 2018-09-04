@@ -37,7 +37,6 @@
 	No record found.
 </ng-template>
 
-<div class="loader">
 <p-dialog [(visible)]="display" [responsive]="true" class="pdialog customDialog" width="550">
 	<p-header class='pheader'>{{customerName}} {{lastName}}
 		<a [routerLink]="" (click)="closePopUp()">
@@ -82,7 +81,6 @@
 		</div>
 	</div>
 </p-dialog>
-</div>
 
 <!-- <ul>
 	<div *ngFor="let item of customerCard | paginate: { itemsPerPage: 5, currentPage: p }">asdf </div>
