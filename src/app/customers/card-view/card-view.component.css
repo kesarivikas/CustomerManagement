@@ -32,6 +32,12 @@
 	padding-right: 30px;
 }
 
+@media screen and (max-width: 780px) {
+	[class*="col-"] {
+		padding-right: 15px;
+	}	
+}
+
 .row {
 	margin-right: 0px;
 	margin-left: 0px;
@@ -65,14 +71,14 @@
 	background-color:;
 } */
 .customDialog .ui-widget-header .ui-dialog-title {
-	background: #ffffff;
-		height: auto;
 
-			font-weight: 400;
-			font-style: normal;
-			color: black;
-			font-size: 18px !important;
-			line-height: 0;
+	background: #ffffff;
+	height: auto;
+	font-weight: 400;
+	font-style: normal;
+	color: black;
+	font-size: 18px !important;
+	line-height: 0;
 }
 /* 
 .ui-dialog-titlebar.ui-widget-header.customDialog {

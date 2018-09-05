@@ -1,5 +1,5 @@
-<div class="row">
-	<label for="fname" class="col-sm-2 col-form-label">Filter: </label>
+<div class="row cms-container">
+	<label for="fname" class="col-form-label">Filter: </label>
 	<!-- <input type="text" #firstName placeholder="First Name" class="col-xs-4 col-md-2"> -->
 	<p-autoComplete [(ngModel)]="firstName" #name [suggestions]="searchResult" (completeMethod)="search($event)" field="firstName" placeholder="Countries" (keyup)="onChange(firstName)"></p-autoComplete>
 </div>

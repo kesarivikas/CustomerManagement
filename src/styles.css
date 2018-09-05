@@ -3,6 +3,7 @@
 
 .cms-container {
 	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 .ng-invalid:not(form) {
@@ -197,3 +198,14 @@ li.nav-pills.active {
 	opacity: .7;
 	background: #000 no-repeat center;
 }
+
+@media screen and (max-width: 480px) {
+	.customDialog .ui-widget-content {	
+		max-width: 315px;
+	}
+	
+	.customDialog .ui-widget-header{
+		max-width: 315px;
+	}
+}
+

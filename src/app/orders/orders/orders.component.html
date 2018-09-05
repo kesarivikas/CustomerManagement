@@ -5,7 +5,7 @@
 	<input type="text" #orderSearch placeholder="First Name">
 </div>
 
-<div *ngFor='let order of orderList' class="cms-container">
+<div *ngFor='let order of orderList' class="cms-container orders">
 		<p-table [value]="order.orders" class="ptable table-striped" [responsive]='true'>
 				<ng-template pTemplate="caption" class="customCaption">
 					<div class="table-caption">
